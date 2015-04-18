@@ -194,9 +194,20 @@ options {
 	public int charCount = 0;
 	public int whiteSpaceCount = 0;
 	public int commentCharCount = 0;
+
+	public List<String> commentsSet = new List<String>();
 	
 	// Data accessors
-	public int getCharCount(){ return charCount; }
+	public int getCharCount()
+	{
+		//int commentChars = 0;
+                for (int k = 0; k < commentsSet.Count; k++ )
+                {
+                    String com = commentsSet.ElementAt(k).ToString();
+                    commentCharCount += com.Length;
+                }
+                return commentCharCount; 
+	}
 	public int getWhiteSpaceCount(){ return whiteSpaceCount; }
 	public int getCommentCharCount(){ return commentCharCount; }
 }
@@ -1170,11 +1181,12 @@ JavaIDDigit
 WS  :  (' '|'\r'|'\t'|'\u000C'|'\n') {whiteSpaceCount++; $channel=Hidden;}
     ;
     
-Comments
-	: ('/*' ( options {greedy=false;} : . )* '*/') => COMMENT {commentCharCount = commentCharCount + 4; $channel=Hidden;}
-	| ('//' ((~('\n'|'\r')))* '\r'? '\n') => LINE_COMMENT {commentCharCount = commentCharCount + 2; $channel=Hidden;}
-	| EOF
-	;
+Comments 
+	: COMMENT {commentsSet.Add($COMMENT.Text);}
+		{$channel=Hidden;}
+	| LINE_COMMENT {commentsSet.Add($LINE_COMMENT.Text);}
+		{$channel=Hidden; }
+	;	
 	
 fragment
 COMMENT

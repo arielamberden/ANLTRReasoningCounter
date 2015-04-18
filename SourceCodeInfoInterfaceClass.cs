@@ -1664,7 +1664,7 @@ namespace ANTLRReasoningCounter
         }
 
         // Conncetion static string
-        private static readonly string CONNECTION = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"c:\\users\\ariel\\documents\\visual studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\SourceCodeInformation.mdf\";Integrated Security=True";
+        private static readonly string CONNECTION = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"C:\\Users\\Revren\\Source\\ANTLRReasoningCounter\\SourceCodeInformation.mdf\";Integrated Security=True";
         
         // Table creation static strings
         private static readonly string CREATE_TABLE_PACKAGES = @"CREATE TABLE Packages (

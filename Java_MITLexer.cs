@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g 2015-04-16 04:54:41
+// $ANTLR 3.5.1 G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g 2015-04-17 18:34:13
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -17,8 +17,10 @@
 // Missing XML comment for publicly visible type or member 'Type_or_Member'
 #pragma warning disable 1591
 
-
+using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Linq;
 using Antlr.Runtime;
 using Antlr.Runtime.Misc;
 using ConditionalAttribute = System.Diagnostics.ConditionalAttribute;
@@ -147,9 +149,20 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 		public int charCount = 0;
 		public int whiteSpaceCount = 0;
 		public int commentCharCount = 0;
+
+		public List<String> commentsSet = new List<String>();
 		
 		// Data accessors
-		public int getCharCount(){ return charCount; }
+		public int getCharCount()
+		{
+			//int commentChars = 0;
+	                for (int k = 0; k < commentsSet.Count; k++ )
+	                {
+	                    String com = commentsSet.ElementAt(k).ToString();
+	                    commentCharCount += com.Length;
+	                }
+	                return commentCharCount; 
+		}
 		public int getWhiteSpaceCount(){ return whiteSpaceCount; }
 		public int getCommentCharCount(){ return commentCharCount; }
 
@@ -173,7 +186,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
 		OnCreated();
 	}
-	public override string GrammarFileName { get { return "C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g"; } }
+	public override string GrammarFileName { get { return "G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g"; } }
 
 	private static readonly bool[] decisionCanBacktrack = new bool[0];
 
@@ -200,12 +213,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__26;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:22:7: ( '!' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:33:7: ( '!' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:22:9: '!'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:33:9: '!'
     		{
-    		DebugLocation(22, 9);
-    		Match('!'); if (state.failed) return;
+    		DebugLocation(33, 9);
+    		Match('!'); 
 
     		}
 
@@ -237,12 +250,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__27;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:23:7: ( '!=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:34:7: ( '!=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:23:9: '!='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:34:9: '!='
     		{
-    		DebugLocation(23, 9);
-    		Match("!="); if (state.failed) return;
+    		DebugLocation(34, 9);
+    		Match("!="); 
 
 
     		}
@@ -275,12 +288,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__28;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:24:7: ( '%' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:35:7: ( '%' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:24:9: '%'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:35:9: '%'
     		{
-    		DebugLocation(24, 9);
-    		Match('%'); if (state.failed) return;
+    		DebugLocation(35, 9);
+    		Match('%'); 
 
     		}
 
@@ -312,12 +325,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__29;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:25:7: ( '%=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:36:7: ( '%=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:25:9: '%='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:36:9: '%='
     		{
-    		DebugLocation(25, 9);
-    		Match("%="); if (state.failed) return;
+    		DebugLocation(36, 9);
+    		Match("%="); 
 
 
     		}
@@ -350,12 +363,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__30;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:26:7: ( '&&' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:37:7: ( '&&' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:26:9: '&&'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:37:9: '&&'
     		{
-    		DebugLocation(26, 9);
-    		Match("&&"); if (state.failed) return;
+    		DebugLocation(37, 9);
+    		Match("&&"); 
 
 
     		}
@@ -388,12 +401,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__31;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:27:7: ( '&' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:38:7: ( '&' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:27:9: '&'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:38:9: '&'
     		{
-    		DebugLocation(27, 9);
-    		Match('&'); if (state.failed) return;
+    		DebugLocation(38, 9);
+    		Match('&'); 
 
     		}
 
@@ -425,12 +438,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__32;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:28:7: ( '&=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:39:7: ( '&=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:28:9: '&='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:39:9: '&='
     		{
-    		DebugLocation(28, 9);
-    		Match("&="); if (state.failed) return;
+    		DebugLocation(39, 9);
+    		Match("&="); 
 
 
     		}
@@ -463,12 +476,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__33;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:29:7: ( '(' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:40:7: ( '(' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:29:9: '('
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:40:9: '('
     		{
-    		DebugLocation(29, 9);
-    		Match('('); if (state.failed) return;
+    		DebugLocation(40, 9);
+    		Match('('); 
 
     		}
 
@@ -500,12 +513,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__34;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:30:7: ( ')' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:41:7: ( ')' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:30:9: ')'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:41:9: ')'
     		{
-    		DebugLocation(30, 9);
-    		Match(')'); if (state.failed) return;
+    		DebugLocation(41, 9);
+    		Match(')'); 
 
     		}
 
@@ -537,12 +550,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__35;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:31:7: ( '*' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:42:7: ( '*' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:31:9: '*'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:42:9: '*'
     		{
-    		DebugLocation(31, 9);
-    		Match('*'); if (state.failed) return;
+    		DebugLocation(42, 9);
+    		Match('*'); 
 
     		}
 
@@ -574,12 +587,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__36;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:32:7: ( '*=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:43:7: ( '*=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:32:9: '*='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:43:9: '*='
     		{
-    		DebugLocation(32, 9);
-    		Match("*="); if (state.failed) return;
+    		DebugLocation(43, 9);
+    		Match("*="); 
 
 
     		}
@@ -612,12 +625,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__37;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:33:7: ( '+' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:44:7: ( '+' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:33:9: '+'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:44:9: '+'
     		{
-    		DebugLocation(33, 9);
-    		Match('+'); if (state.failed) return;
+    		DebugLocation(44, 9);
+    		Match('+'); 
 
     		}
 
@@ -649,12 +662,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__38;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:34:7: ( '++' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:45:7: ( '++' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:34:9: '++'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:45:9: '++'
     		{
-    		DebugLocation(34, 9);
-    		Match("++"); if (state.failed) return;
+    		DebugLocation(45, 9);
+    		Match("++"); 
 
 
     		}
@@ -687,12 +700,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__39;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:35:7: ( '+=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:46:7: ( '+=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:35:9: '+='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:46:9: '+='
     		{
-    		DebugLocation(35, 9);
-    		Match("+="); if (state.failed) return;
+    		DebugLocation(46, 9);
+    		Match("+="); 
 
 
     		}
@@ -725,12 +738,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__40;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:36:7: ( ',' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:47:7: ( ',' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:36:9: ','
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:47:9: ','
     		{
-    		DebugLocation(36, 9);
-    		Match(','); if (state.failed) return;
+    		DebugLocation(47, 9);
+    		Match(','); 
 
     		}
 
@@ -762,12 +775,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__41;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:37:7: ( '-' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:48:7: ( '-' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:37:9: '-'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:48:9: '-'
     		{
-    		DebugLocation(37, 9);
-    		Match('-'); if (state.failed) return;
+    		DebugLocation(48, 9);
+    		Match('-'); 
 
     		}
 
@@ -799,12 +812,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__42;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:38:7: ( '--' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:49:7: ( '--' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:38:9: '--'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:49:9: '--'
     		{
-    		DebugLocation(38, 9);
-    		Match("--"); if (state.failed) return;
+    		DebugLocation(49, 9);
+    		Match("--"); 
 
 
     		}
@@ -837,12 +850,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__43;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:39:7: ( '-=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:50:7: ( '-=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:39:9: '-='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:50:9: '-='
     		{
-    		DebugLocation(39, 9);
-    		Match("-="); if (state.failed) return;
+    		DebugLocation(50, 9);
+    		Match("-="); 
 
 
     		}
@@ -875,12 +888,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__44;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:40:7: ( '.' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:51:7: ( '.' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:40:9: '.'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:51:9: '.'
     		{
-    		DebugLocation(40, 9);
-    		Match('.'); if (state.failed) return;
+    		DebugLocation(51, 9);
+    		Match('.'); 
 
     		}
 
@@ -912,12 +925,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__45;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:41:7: ( '...' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:52:7: ( '...' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:41:9: '...'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:52:9: '...'
     		{
-    		DebugLocation(41, 9);
-    		Match("..."); if (state.failed) return;
+    		DebugLocation(52, 9);
+    		Match("..."); 
 
 
     		}
@@ -950,12 +963,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__46;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:42:7: ( '/' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:53:7: ( '/' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:42:9: '/'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:53:9: '/'
     		{
-    		DebugLocation(42, 9);
-    		Match('/'); if (state.failed) return;
+    		DebugLocation(53, 9);
+    		Match('/'); 
 
     		}
 
@@ -987,12 +1000,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__47;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:43:7: ( '/=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:54:7: ( '/=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:43:9: '/='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:54:9: '/='
     		{
-    		DebugLocation(43, 9);
-    		Match("/="); if (state.failed) return;
+    		DebugLocation(54, 9);
+    		Match("/="); 
 
 
     		}
@@ -1025,12 +1038,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__48;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:44:7: ( ':' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:55:7: ( ':' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:44:9: ':'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:55:9: ':'
     		{
-    		DebugLocation(44, 9);
-    		Match(':'); if (state.failed) return;
+    		DebugLocation(55, 9);
+    		Match(':'); 
 
     		}
 
@@ -1062,12 +1075,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__49;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:45:7: ( ';' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:56:7: ( ';' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:45:9: ';'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:56:9: ';'
     		{
-    		DebugLocation(45, 9);
-    		Match(';'); if (state.failed) return;
+    		DebugLocation(56, 9);
+    		Match(';'); 
 
     		}
 
@@ -1099,12 +1112,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__50;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:46:7: ( '<' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:57:7: ( '<' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:46:9: '<'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:57:9: '<'
     		{
-    		DebugLocation(46, 9);
-    		Match('<'); if (state.failed) return;
+    		DebugLocation(57, 9);
+    		Match('<'); 
 
     		}
 
@@ -1136,12 +1149,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__51;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:47:7: ( '=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:58:7: ( '=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:47:9: '='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:58:9: '='
     		{
-    		DebugLocation(47, 9);
-    		Match('='); if (state.failed) return;
+    		DebugLocation(58, 9);
+    		Match('='); 
 
     		}
 
@@ -1173,12 +1186,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__52;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:48:7: ( '==' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:59:7: ( '==' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:48:9: '=='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:59:9: '=='
     		{
-    		DebugLocation(48, 9);
-    		Match("=="); if (state.failed) return;
+    		DebugLocation(59, 9);
+    		Match("=="); 
 
 
     		}
@@ -1211,12 +1224,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__53;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:49:7: ( '>' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:60:7: ( '>' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:49:9: '>'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:60:9: '>'
     		{
-    		DebugLocation(49, 9);
-    		Match('>'); if (state.failed) return;
+    		DebugLocation(60, 9);
+    		Match('>'); 
 
     		}
 
@@ -1248,12 +1261,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__54;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:50:7: ( '?' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:61:7: ( '?' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:50:9: '?'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:61:9: '?'
     		{
-    		DebugLocation(50, 9);
-    		Match('?'); if (state.failed) return;
+    		DebugLocation(61, 9);
+    		Match('?'); 
 
     		}
 
@@ -1285,12 +1298,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__55;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:51:7: ( '@' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:62:7: ( '@' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:51:9: '@'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:62:9: '@'
     		{
-    		DebugLocation(51, 9);
-    		Match('@'); if (state.failed) return;
+    		DebugLocation(62, 9);
+    		Match('@'); 
 
     		}
 
@@ -1322,12 +1335,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__56;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:52:7: ( '[' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:63:7: ( '[' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:52:9: '['
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:63:9: '['
     		{
-    		DebugLocation(52, 9);
-    		Match('['); if (state.failed) return;
+    		DebugLocation(63, 9);
+    		Match('['); 
 
     		}
 
@@ -1359,12 +1372,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__57;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:53:7: ( ']' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:64:7: ( ']' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:53:9: ']'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:64:9: ']'
     		{
-    		DebugLocation(53, 9);
-    		Match(']'); if (state.failed) return;
+    		DebugLocation(64, 9);
+    		Match(']'); 
 
     		}
 
@@ -1396,12 +1409,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__58;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:54:7: ( '^' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:65:7: ( '^' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:54:9: '^'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:65:9: '^'
     		{
-    		DebugLocation(54, 9);
-    		Match('^'); if (state.failed) return;
+    		DebugLocation(65, 9);
+    		Match('^'); 
 
     		}
 
@@ -1433,12 +1446,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__59;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:55:7: ( '^=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:66:7: ( '^=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:55:9: '^='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:66:9: '^='
     		{
-    		DebugLocation(55, 9);
-    		Match("^="); if (state.failed) return;
+    		DebugLocation(66, 9);
+    		Match("^="); 
 
 
     		}
@@ -1471,12 +1484,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__60;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:56:7: ( 'abstract' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:67:7: ( 'abstract' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:56:9: 'abstract'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:67:9: 'abstract'
     		{
-    		DebugLocation(56, 9);
-    		Match("abstract"); if (state.failed) return;
+    		DebugLocation(67, 9);
+    		Match("abstract"); 
 
 
     		}
@@ -1509,12 +1522,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__61;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:57:7: ( 'boolean' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:68:7: ( 'boolean' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:57:9: 'boolean'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:68:9: 'boolean'
     		{
-    		DebugLocation(57, 9);
-    		Match("boolean"); if (state.failed) return;
+    		DebugLocation(68, 9);
+    		Match("boolean"); 
 
 
     		}
@@ -1547,12 +1560,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__62;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:58:7: ( 'break' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:69:7: ( 'break' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:58:9: 'break'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:69:9: 'break'
     		{
-    		DebugLocation(58, 9);
-    		Match("break"); if (state.failed) return;
+    		DebugLocation(69, 9);
+    		Match("break"); 
 
 
     		}
@@ -1585,12 +1598,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__63;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:59:7: ( 'byte' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:70:7: ( 'byte' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:59:9: 'byte'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:70:9: 'byte'
     		{
-    		DebugLocation(59, 9);
-    		Match("byte"); if (state.failed) return;
+    		DebugLocation(70, 9);
+    		Match("byte"); 
 
 
     		}
@@ -1623,12 +1636,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__64;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:60:7: ( 'case' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:71:7: ( 'case' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:60:9: 'case'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:71:9: 'case'
     		{
-    		DebugLocation(60, 9);
-    		Match("case"); if (state.failed) return;
+    		DebugLocation(71, 9);
+    		Match("case"); 
 
 
     		}
@@ -1661,12 +1674,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__65;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:61:7: ( 'catch' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:72:7: ( 'catch' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:61:9: 'catch'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:72:9: 'catch'
     		{
-    		DebugLocation(61, 9);
-    		Match("catch"); if (state.failed) return;
+    		DebugLocation(72, 9);
+    		Match("catch"); 
 
 
     		}
@@ -1699,12 +1712,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__66;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:62:7: ( 'char' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:73:7: ( 'char' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:62:9: 'char'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:73:9: 'char'
     		{
-    		DebugLocation(62, 9);
-    		Match("char"); if (state.failed) return;
+    		DebugLocation(73, 9);
+    		Match("char"); 
 
 
     		}
@@ -1737,12 +1750,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__67;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:63:7: ( 'class' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:74:7: ( 'class' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:63:9: 'class'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:74:9: 'class'
     		{
-    		DebugLocation(63, 9);
-    		Match("class"); if (state.failed) return;
+    		DebugLocation(74, 9);
+    		Match("class"); 
 
 
     		}
@@ -1775,12 +1788,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__68;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:64:7: ( 'continue' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:75:7: ( 'continue' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:64:9: 'continue'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:75:9: 'continue'
     		{
-    		DebugLocation(64, 9);
-    		Match("continue"); if (state.failed) return;
+    		DebugLocation(75, 9);
+    		Match("continue"); 
 
 
     		}
@@ -1813,12 +1826,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__69;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:65:7: ( 'default' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:76:7: ( 'default' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:65:9: 'default'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:76:9: 'default'
     		{
-    		DebugLocation(65, 9);
-    		Match("default"); if (state.failed) return;
+    		DebugLocation(76, 9);
+    		Match("default"); 
 
 
     		}
@@ -1851,12 +1864,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__70;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:66:7: ( 'do' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:77:7: ( 'do' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:66:9: 'do'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:77:9: 'do'
     		{
-    		DebugLocation(66, 9);
-    		Match("do"); if (state.failed) return;
+    		DebugLocation(77, 9);
+    		Match("do"); 
 
 
     		}
@@ -1889,12 +1902,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__71;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:67:7: ( 'double' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:78:7: ( 'double' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:67:9: 'double'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:78:9: 'double'
     		{
-    		DebugLocation(67, 9);
-    		Match("double"); if (state.failed) return;
+    		DebugLocation(78, 9);
+    		Match("double"); 
 
 
     		}
@@ -1927,12 +1940,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__72;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:68:7: ( 'else' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:79:7: ( 'else' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:68:9: 'else'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:79:9: 'else'
     		{
-    		DebugLocation(68, 9);
-    		Match("else"); if (state.failed) return;
+    		DebugLocation(79, 9);
+    		Match("else"); 
 
 
     		}
@@ -1965,12 +1978,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__73;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:69:7: ( 'extends' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:80:7: ( 'extends' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:69:9: 'extends'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:80:9: 'extends'
     		{
-    		DebugLocation(69, 9);
-    		Match("extends"); if (state.failed) return;
+    		DebugLocation(80, 9);
+    		Match("extends"); 
 
 
     		}
@@ -2003,12 +2016,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__74;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:70:7: ( 'false' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:81:7: ( 'false' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:70:9: 'false'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:81:9: 'false'
     		{
-    		DebugLocation(70, 9);
-    		Match("false"); if (state.failed) return;
+    		DebugLocation(81, 9);
+    		Match("false"); 
 
 
     		}
@@ -2041,12 +2054,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__75;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:71:7: ( 'final' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:82:7: ( 'final' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:71:9: 'final'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:82:9: 'final'
     		{
-    		DebugLocation(71, 9);
-    		Match("final"); if (state.failed) return;
+    		DebugLocation(82, 9);
+    		Match("final"); 
 
 
     		}
@@ -2079,12 +2092,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__76;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:72:7: ( 'finally' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:83:7: ( 'finally' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:72:9: 'finally'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:83:9: 'finally'
     		{
-    		DebugLocation(72, 9);
-    		Match("finally"); if (state.failed) return;
+    		DebugLocation(83, 9);
+    		Match("finally"); 
 
 
     		}
@@ -2117,12 +2130,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__77;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:73:7: ( 'float' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:84:7: ( 'float' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:73:9: 'float'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:84:9: 'float'
     		{
-    		DebugLocation(73, 9);
-    		Match("float"); if (state.failed) return;
+    		DebugLocation(84, 9);
+    		Match("float"); 
 
 
     		}
@@ -2155,12 +2168,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__78;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:74:7: ( 'for' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:85:7: ( 'for' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:74:9: 'for'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:85:9: 'for'
     		{
-    		DebugLocation(74, 9);
-    		Match("for"); if (state.failed) return;
+    		DebugLocation(85, 9);
+    		Match("for"); 
 
 
     		}
@@ -2193,12 +2206,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__79;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:75:7: ( 'if' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:86:7: ( 'if' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:75:9: 'if'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:86:9: 'if'
     		{
-    		DebugLocation(75, 9);
-    		Match("if"); if (state.failed) return;
+    		DebugLocation(86, 9);
+    		Match("if"); 
 
 
     		}
@@ -2231,12 +2244,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__80;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:76:7: ( 'implements' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:87:7: ( 'implements' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:76:9: 'implements'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:87:9: 'implements'
     		{
-    		DebugLocation(76, 9);
-    		Match("implements"); if (state.failed) return;
+    		DebugLocation(87, 9);
+    		Match("implements"); 
 
 
     		}
@@ -2269,12 +2282,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__81;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:77:7: ( 'import' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:88:7: ( 'import' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:77:9: 'import'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:88:9: 'import'
     		{
-    		DebugLocation(77, 9);
-    		Match("import"); if (state.failed) return;
+    		DebugLocation(88, 9);
+    		Match("import"); 
 
 
     		}
@@ -2307,12 +2320,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__82;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:78:7: ( 'instanceof' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:89:7: ( 'instanceof' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:78:9: 'instanceof'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:89:9: 'instanceof'
     		{
-    		DebugLocation(78, 9);
-    		Match("instanceof"); if (state.failed) return;
+    		DebugLocation(89, 9);
+    		Match("instanceof"); 
 
 
     		}
@@ -2345,12 +2358,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__83;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:79:7: ( 'int' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:90:7: ( 'int' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:79:9: 'int'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:90:9: 'int'
     		{
-    		DebugLocation(79, 9);
-    		Match("int"); if (state.failed) return;
+    		DebugLocation(90, 9);
+    		Match("int"); 
 
 
     		}
@@ -2383,12 +2396,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__84;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:80:7: ( 'interface' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:91:7: ( 'interface' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:80:9: 'interface'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:91:9: 'interface'
     		{
-    		DebugLocation(80, 9);
-    		Match("interface"); if (state.failed) return;
+    		DebugLocation(91, 9);
+    		Match("interface"); 
 
 
     		}
@@ -2421,12 +2434,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__85;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:81:7: ( 'long' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:92:7: ( 'long' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:81:9: 'long'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:92:9: 'long'
     		{
-    		DebugLocation(81, 9);
-    		Match("long"); if (state.failed) return;
+    		DebugLocation(92, 9);
+    		Match("long"); 
 
 
     		}
@@ -2459,12 +2472,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__86;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:82:7: ( 'native' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:93:7: ( 'native' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:82:9: 'native'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:93:9: 'native'
     		{
-    		DebugLocation(82, 9);
-    		Match("native"); if (state.failed) return;
+    		DebugLocation(93, 9);
+    		Match("native"); 
 
 
     		}
@@ -2497,12 +2510,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__87;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:83:7: ( 'new' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:94:7: ( 'new' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:83:9: 'new'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:94:9: 'new'
     		{
-    		DebugLocation(83, 9);
-    		Match("new"); if (state.failed) return;
+    		DebugLocation(94, 9);
+    		Match("new"); 
 
 
     		}
@@ -2535,12 +2548,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__88;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:84:7: ( 'null' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:95:7: ( 'null' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:84:9: 'null'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:95:9: 'null'
     		{
-    		DebugLocation(84, 9);
-    		Match("null"); if (state.failed) return;
+    		DebugLocation(95, 9);
+    		Match("null"); 
 
 
     		}
@@ -2573,12 +2586,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__89;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:85:7: ( 'package' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:96:7: ( 'package' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:85:9: 'package'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:96:9: 'package'
     		{
-    		DebugLocation(85, 9);
-    		Match("package"); if (state.failed) return;
+    		DebugLocation(96, 9);
+    		Match("package"); 
 
 
     		}
@@ -2611,12 +2624,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__90;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:86:7: ( 'private' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:97:7: ( 'private' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:86:9: 'private'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:97:9: 'private'
     		{
-    		DebugLocation(86, 9);
-    		Match("private"); if (state.failed) return;
+    		DebugLocation(97, 9);
+    		Match("private"); 
 
 
     		}
@@ -2649,12 +2662,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__91;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:87:7: ( 'protected' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:98:7: ( 'protected' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:87:9: 'protected'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:98:9: 'protected'
     		{
-    		DebugLocation(87, 9);
-    		Match("protected"); if (state.failed) return;
+    		DebugLocation(98, 9);
+    		Match("protected"); 
 
 
     		}
@@ -2687,12 +2700,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__92;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:88:7: ( 'public' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:99:7: ( 'public' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:88:9: 'public'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:99:9: 'public'
     		{
-    		DebugLocation(88, 9);
-    		Match("public"); if (state.failed) return;
+    		DebugLocation(99, 9);
+    		Match("public"); 
 
 
     		}
@@ -2725,12 +2738,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__93;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:89:7: ( 'return' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:100:7: ( 'return' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:89:9: 'return'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:100:9: 'return'
     		{
-    		DebugLocation(89, 9);
-    		Match("return"); if (state.failed) return;
+    		DebugLocation(100, 9);
+    		Match("return"); 
 
 
     		}
@@ -2763,12 +2776,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__94;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:90:7: ( 'short' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:101:7: ( 'short' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:90:9: 'short'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:101:9: 'short'
     		{
-    		DebugLocation(90, 9);
-    		Match("short"); if (state.failed) return;
+    		DebugLocation(101, 9);
+    		Match("short"); 
 
 
     		}
@@ -2801,12 +2814,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__95;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:91:7: ( 'static' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:102:7: ( 'static' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:91:9: 'static'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:102:9: 'static'
     		{
-    		DebugLocation(91, 9);
-    		Match("static"); if (state.failed) return;
+    		DebugLocation(102, 9);
+    		Match("static"); 
 
 
     		}
@@ -2839,12 +2852,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__96;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:92:7: ( 'strictfp' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:103:7: ( 'strictfp' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:92:9: 'strictfp'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:103:9: 'strictfp'
     		{
-    		DebugLocation(92, 9);
-    		Match("strictfp"); if (state.failed) return;
+    		DebugLocation(103, 9);
+    		Match("strictfp"); 
 
 
     		}
@@ -2877,12 +2890,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__97;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:93:7: ( 'super' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:104:7: ( 'super' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:93:9: 'super'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:104:9: 'super'
     		{
-    		DebugLocation(93, 9);
-    		Match("super"); if (state.failed) return;
+    		DebugLocation(104, 9);
+    		Match("super"); 
 
 
     		}
@@ -2915,12 +2928,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__98;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:94:7: ( 'switch' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:105:7: ( 'switch' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:94:9: 'switch'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:105:9: 'switch'
     		{
-    		DebugLocation(94, 9);
-    		Match("switch"); if (state.failed) return;
+    		DebugLocation(105, 9);
+    		Match("switch"); 
 
 
     		}
@@ -2953,12 +2966,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__99;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:95:7: ( 'synchronized' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:106:7: ( 'synchronized' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:95:9: 'synchronized'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:106:9: 'synchronized'
     		{
-    		DebugLocation(95, 9);
-    		Match("synchronized"); if (state.failed) return;
+    		DebugLocation(106, 9);
+    		Match("synchronized"); 
 
 
     		}
@@ -2991,12 +3004,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__100;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:96:8: ( 'this' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:107:8: ( 'this' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:96:10: 'this'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:107:10: 'this'
     		{
-    		DebugLocation(96, 10);
-    		Match("this"); if (state.failed) return;
+    		DebugLocation(107, 10);
+    		Match("this"); 
 
 
     		}
@@ -3029,12 +3042,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__101;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:97:8: ( 'throw' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:108:8: ( 'throw' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:97:10: 'throw'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:108:10: 'throw'
     		{
-    		DebugLocation(97, 10);
-    		Match("throw"); if (state.failed) return;
+    		DebugLocation(108, 10);
+    		Match("throw"); 
 
 
     		}
@@ -3067,12 +3080,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__102;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:98:8: ( 'throws' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:109:8: ( 'throws' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:98:10: 'throws'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:109:10: 'throws'
     		{
-    		DebugLocation(98, 10);
-    		Match("throws"); if (state.failed) return;
+    		DebugLocation(109, 10);
+    		Match("throws"); 
 
 
     		}
@@ -3105,12 +3118,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__103;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:99:8: ( 'transient' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:110:8: ( 'transient' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:99:10: 'transient'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:110:10: 'transient'
     		{
-    		DebugLocation(99, 10);
-    		Match("transient"); if (state.failed) return;
+    		DebugLocation(110, 10);
+    		Match("transient"); 
 
 
     		}
@@ -3143,12 +3156,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__104;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:100:8: ( 'true' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:111:8: ( 'true' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:100:10: 'true'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:111:10: 'true'
     		{
-    		DebugLocation(100, 10);
-    		Match("true"); if (state.failed) return;
+    		DebugLocation(111, 10);
+    		Match("true"); 
 
 
     		}
@@ -3181,12 +3194,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__105;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:101:8: ( 'try' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:112:8: ( 'try' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:101:10: 'try'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:112:10: 'try'
     		{
-    		DebugLocation(101, 10);
-    		Match("try"); if (state.failed) return;
+    		DebugLocation(112, 10);
+    		Match("try"); 
 
 
     		}
@@ -3219,12 +3232,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__106;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:102:8: ( 'void' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:113:8: ( 'void' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:102:10: 'void'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:113:10: 'void'
     		{
-    		DebugLocation(102, 10);
-    		Match("void"); if (state.failed) return;
+    		DebugLocation(113, 10);
+    		Match("void"); 
 
 
     		}
@@ -3257,12 +3270,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__107;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:103:8: ( 'volatile' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:114:8: ( 'volatile' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:103:10: 'volatile'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:114:10: 'volatile'
     		{
-    		DebugLocation(103, 10);
-    		Match("volatile"); if (state.failed) return;
+    		DebugLocation(114, 10);
+    		Match("volatile"); 
 
 
     		}
@@ -3295,12 +3308,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__108;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:104:8: ( 'while' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:115:8: ( 'while' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:104:10: 'while'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:115:10: 'while'
     		{
-    		DebugLocation(104, 10);
-    		Match("while"); if (state.failed) return;
+    		DebugLocation(115, 10);
+    		Match("while"); 
 
 
     		}
@@ -3333,12 +3346,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__109;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:105:8: ( '{' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:116:8: ( '{' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:105:10: '{'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:116:10: '{'
     		{
-    		DebugLocation(105, 10);
-    		Match('{'); if (state.failed) return;
+    		DebugLocation(116, 10);
+    		Match('{'); 
 
     		}
 
@@ -3370,12 +3383,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__110;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:106:8: ( '|' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:117:8: ( '|' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:106:10: '|'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:117:10: '|'
     		{
-    		DebugLocation(106, 10);
-    		Match('|'); if (state.failed) return;
+    		DebugLocation(117, 10);
+    		Match('|'); 
 
     		}
 
@@ -3407,12 +3420,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__111;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:107:8: ( '|=' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:118:8: ( '|=' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:107:10: '|='
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:118:10: '|='
     		{
-    		DebugLocation(107, 10);
-    		Match("|="); if (state.failed) return;
+    		DebugLocation(118, 10);
+    		Match("|="); 
 
 
     		}
@@ -3445,12 +3458,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__112;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:108:8: ( '||' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:119:8: ( '||' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:108:10: '||'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:119:10: '||'
     		{
-    		DebugLocation(108, 10);
-    		Match("||"); if (state.failed) return;
+    		DebugLocation(119, 10);
+    		Match("||"); 
 
 
     		}
@@ -3483,12 +3496,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__113;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:109:8: ( '}' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:120:8: ( '}' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:109:10: '}'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:120:10: '}'
     		{
-    		DebugLocation(109, 10);
-    		Match('}'); if (state.failed) return;
+    		DebugLocation(120, 10);
+    		Match('}'); 
 
     		}
 
@@ -3520,12 +3533,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = T__114;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:110:8: ( '~' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:121:8: ( '~' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:110:10: '~'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:121:10: '~'
     		{
-    		DebugLocation(110, 10);
-    		Match('~'); if (state.failed) return;
+    		DebugLocation(121, 10);
+    		Match('~'); 
 
     		}
 
@@ -3557,29 +3570,27 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = HexLiteral;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1067:12: ( '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )? )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:12: ( '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )? )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1067:14: '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )?
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:14: '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )?
     		{
-    		DebugLocation(1067, 14);
-    		Match('0'); if (state.failed) return;
-    		DebugLocation(1067, 18);
+    		DebugLocation(1078, 14);
+    		Match('0'); 
+    		DebugLocation(1078, 18);
     		if (input.LA(1)=='X'||input.LA(1)=='x')
     		{
-    			input.Consume(); charCount++;
-    		state.failed=false;
+    			input.Consume();
     		}
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			MismatchedSetException mse = new MismatchedSetException(null,input);
     			DebugRecognitionException(mse);
     			Recover(mse);
     			throw mse;
     		}
 
-    		DebugLocation(1067, 28);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1067:28: ( HexDigit )+
+    		DebugLocation(1078, 28);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:28: ( HexDigit )+
     		int cnt1=0;
     		try { DebugEnterSubRule(1);
     		while (true)
@@ -3599,10 +3610,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1067:28: HexDigit
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:28: HexDigit
     				{
-    				DebugLocation(1067, 28);
-    				mHexDigit(); if (state.failed) return;
+    				DebugLocation(1078, 28);
+    				mHexDigit(); 
 
     				}
     				break;
@@ -3611,7 +3622,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				if (cnt1 >= 1)
     					goto loop1;
 
-    				if (state.backtracking>0) {state.failed=true; return;}
     				EarlyExitException eee1 = new EarlyExitException( 1, input );
     				DebugRecognitionException(eee1);
     				throw eee1;
@@ -3623,8 +3633,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(1); }
 
-    		DebugLocation(1067, 38);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1067:38: ( IntegerTypeSuffix )?
+    		DebugLocation(1078, 38);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:38: ( IntegerTypeSuffix )?
     		int alt2=2;
     		try { DebugEnterSubRule(2);
     		try { DebugEnterDecision(2, decisionCanBacktrack[2]);
@@ -3639,10 +3649,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1067:38: IntegerTypeSuffix
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:38: IntegerTypeSuffix
     			{
-    			DebugLocation(1067, 38);
-    			mIntegerTypeSuffix(); if (state.failed) return;
+    			DebugLocation(1078, 38);
+    			mIntegerTypeSuffix(); 
 
     			}
     			break;
@@ -3650,11 +3660,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(2); }
 
-    		DebugLocation(1067, 57);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1078, 57);
+    		charCount++;
 
     		}
 
@@ -3686,12 +3693,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = DecimalLiteral;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:16: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )? )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:16: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )? )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:18: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )?
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:18: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )?
     		{
-    		DebugLocation(1069, 18);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:18: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+    		DebugLocation(1080, 18);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:18: ( '0' | '1' .. '9' ( '0' .. '9' )* )
     		int alt4=2;
     		try { DebugEnterSubRule(4);
     		try { DebugEnterDecision(4, decisionCanBacktrack[4]);
@@ -3708,7 +3715,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			NoViableAltException nvae = new NoViableAltException("", 4, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
@@ -3719,21 +3725,21 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:19: '0'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:19: '0'
     			{
-    			DebugLocation(1069, 19);
-    			Match('0'); if (state.failed) return;
+    			DebugLocation(1080, 19);
+    			Match('0'); 
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:25: '1' .. '9' ( '0' .. '9' )*
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:25: '1' .. '9' ( '0' .. '9' )*
     			{
-    			DebugLocation(1069, 25);
-    			MatchRange('1','9'); if (state.failed) return;
-    			DebugLocation(1069, 34);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:34: ( '0' .. '9' )*
+    			DebugLocation(1080, 25);
+    			MatchRange('1','9'); 
+    			DebugLocation(1080, 34);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:34: ( '0' .. '9' )*
     			try { DebugEnterSubRule(3);
     			while (true)
     			{
@@ -3752,11 +3758,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    					// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     					{
-    					DebugLocation(1069, 34);
-    					input.Consume(); charCount++;
-    					state.failed=false;
+    					DebugLocation(1080, 34);
+    					input.Consume();
+
 
     					}
     					break;
@@ -3778,8 +3784,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(4); }
 
-    		DebugLocation(1069, 45);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:45: ( IntegerTypeSuffix )?
+    		DebugLocation(1080, 45);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:45: ( IntegerTypeSuffix )?
     		int alt5=2;
     		try { DebugEnterSubRule(5);
     		try { DebugEnterDecision(5, decisionCanBacktrack[5]);
@@ -3794,10 +3800,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1069:45: IntegerTypeSuffix
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:45: IntegerTypeSuffix
     			{
-    			DebugLocation(1069, 45);
-    			mIntegerTypeSuffix(); if (state.failed) return;
+    			DebugLocation(1080, 45);
+    			mIntegerTypeSuffix(); 
 
     			}
     			break;
@@ -3805,11 +3811,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(5); }
 
-    		DebugLocation(1069, 64);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1080, 64);
+    		charCount++;
 
     		}
 
@@ -3841,14 +3844,14 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = OctalLiteral;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1071:14: ( '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )? )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:14: ( '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )? )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1071:16: '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )?
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:16: '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )?
     		{
-    		DebugLocation(1071, 16);
-    		Match('0'); if (state.failed) return;
-    		DebugLocation(1071, 20);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1071:20: ( '0' .. '7' )+
+    		DebugLocation(1082, 16);
+    		Match('0'); 
+    		DebugLocation(1082, 20);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:20: ( '0' .. '7' )+
     		int cnt6=0;
     		try { DebugEnterSubRule(6);
     		while (true)
@@ -3868,11 +3871,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     				{
-    				DebugLocation(1071, 20);
-    				input.Consume(); charCount++;
-    				state.failed=false;
+    				DebugLocation(1082, 20);
+    				input.Consume();
+
 
     				}
     				break;
@@ -3881,7 +3884,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				if (cnt6 >= 1)
     					goto loop6;
 
-    				if (state.backtracking>0) {state.failed=true; return;}
     				EarlyExitException eee6 = new EarlyExitException( 6, input );
     				DebugRecognitionException(eee6);
     				throw eee6;
@@ -3893,8 +3895,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(6); }
 
-    		DebugLocation(1071, 32);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1071:32: ( IntegerTypeSuffix )?
+    		DebugLocation(1082, 32);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:32: ( IntegerTypeSuffix )?
     		int alt7=2;
     		try { DebugEnterSubRule(7);
     		try { DebugEnterDecision(7, decisionCanBacktrack[7]);
@@ -3909,10 +3911,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1071:32: IntegerTypeSuffix
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:32: IntegerTypeSuffix
     			{
-    			DebugLocation(1071, 32);
-    			mIntegerTypeSuffix(); if (state.failed) return;
+    			DebugLocation(1082, 32);
+    			mIntegerTypeSuffix(); 
 
     			}
     			break;
@@ -3920,11 +3922,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(7); }
 
-    		DebugLocation(1071, 51);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1082, 51);
+    		charCount++;
 
     		}
 
@@ -3954,30 +3953,25 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("HexDigit", 93);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1075:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1086:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1075:12: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1086:12: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
     		{
-    		DebugLocation(1075, 12);
+    		DebugLocation(1086, 12);
     		if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
     		{
-    			input.Consume(); charCount++;
-    		state.failed=false;
+    			input.Consume();
     		}
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			MismatchedSetException mse = new MismatchedSetException(null,input);
     			DebugRecognitionException(mse);
     			Recover(mse);
     			throw mse;
     		}
 
-    		DebugLocation(1075, 41);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1086, 41);
+    		charCount++;
 
     		}
 
@@ -4005,30 +3999,25 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("IntegerTypeSuffix", 94);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:19: ( ( 'l' | 'L' ) )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1089:19: ( ( 'l' | 'L' ) )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1078:21: ( 'l' | 'L' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1089:21: ( 'l' | 'L' )
     		{
-    		DebugLocation(1078, 21);
+    		DebugLocation(1089, 21);
     		if (input.LA(1)=='L'||input.LA(1)=='l')
     		{
-    			input.Consume(); charCount++;
-    		state.failed=false;
+    			input.Consume();
     		}
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			MismatchedSetException mse = new MismatchedSetException(null,input);
     			DebugRecognitionException(mse);
     			Recover(mse);
     			throw mse;
     		}
 
-    		DebugLocation(1078, 31);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1089, 31);
+    		charCount++;
 
     		}
 
@@ -4058,7 +4047,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = FloatingPointLiteral;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix )
     		int alt18=4;
     		try { DebugEnterDecision(18, decisionCanBacktrack[18]);
     		try
@@ -4075,10 +4064,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )?
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )?
     			{
-    			DebugLocation(1080, 9);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:9: ( '0' .. '9' )+
+    			DebugLocation(1091, 9);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:9: ( '0' .. '9' )+
     			int cnt8=0;
     			try { DebugEnterSubRule(8);
     			while (true)
@@ -4098,11 +4087,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    					// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     					{
-    					DebugLocation(1080, 9);
-    					input.Consume(); charCount++;
-    					state.failed=false;
+    					DebugLocation(1091, 9);
+    					input.Consume();
+
 
     					}
     					break;
@@ -4111,7 +4100,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     					if (cnt8 >= 1)
     						goto loop8;
 
-    					if (state.backtracking>0) {state.failed=true; return;}
     					EarlyExitException eee8 = new EarlyExitException( 8, input );
     					DebugRecognitionException(eee8);
     					throw eee8;
@@ -4123,10 +4111,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(8); }
 
-    			DebugLocation(1080, 21);
-    			Match('.'); if (state.failed) return;
-    			DebugLocation(1080, 25);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:25: ( '0' .. '9' )*
+    			DebugLocation(1091, 21);
+    			Match('.'); 
+    			DebugLocation(1091, 25);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:25: ( '0' .. '9' )*
     			try { DebugEnterSubRule(9);
     			while (true)
     			{
@@ -4145,11 +4133,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    					// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     					{
-    					DebugLocation(1080, 25);
-    					input.Consume(); charCount++;
-    					state.failed=false;
+    					DebugLocation(1091, 25);
+    					input.Consume();
+
 
     					}
     					break;
@@ -4164,8 +4152,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(9); }
 
-    			DebugLocation(1080, 37);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:37: ( Exponent )?
+    			DebugLocation(1091, 37);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:37: ( Exponent )?
     			int alt10=2;
     			try { DebugEnterSubRule(10);
     			try { DebugEnterDecision(10, decisionCanBacktrack[10]);
@@ -4180,10 +4168,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:37: Exponent
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:37: Exponent
     				{
-    				DebugLocation(1080, 37);
-    				mExponent(); if (state.failed) return;
+    				DebugLocation(1091, 37);
+    				mExponent(); 
 
     				}
     				break;
@@ -4191,8 +4179,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			}
     			} finally { DebugExitSubRule(10); }
 
-    			DebugLocation(1080, 47);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:47: ( FloatTypeSuffix )?
+    			DebugLocation(1091, 47);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:47: ( FloatTypeSuffix )?
     			int alt11=2;
     			try { DebugEnterSubRule(11);
     			try { DebugEnterDecision(11, decisionCanBacktrack[11]);
@@ -4207,10 +4195,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1080:47: FloatTypeSuffix
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:47: FloatTypeSuffix
     				{
-    				DebugLocation(1080, 47);
-    				mFloatTypeSuffix(); if (state.failed) return;
+    				DebugLocation(1091, 47);
+    				mFloatTypeSuffix(); 
 
     				}
     				break;
@@ -4218,22 +4206,19 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			}
     			} finally { DebugExitSubRule(11); }
 
-    			DebugLocation(1080, 64);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1091, 64);
+    			charCount++;
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1081:9: '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )?
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1092:9: '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )?
     			{
-    			DebugLocation(1081, 9);
-    			Match('.'); if (state.failed) return;
-    			DebugLocation(1081, 13);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1081:13: ( '0' .. '9' )+
+    			DebugLocation(1092, 9);
+    			Match('.'); 
+    			DebugLocation(1092, 13);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1092:13: ( '0' .. '9' )+
     			int cnt12=0;
     			try { DebugEnterSubRule(12);
     			while (true)
@@ -4253,11 +4238,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    					// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     					{
-    					DebugLocation(1081, 13);
-    					input.Consume(); charCount++;
-    					state.failed=false;
+    					DebugLocation(1092, 13);
+    					input.Consume();
+
 
     					}
     					break;
@@ -4266,7 +4251,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     					if (cnt12 >= 1)
     						goto loop12;
 
-    					if (state.backtracking>0) {state.failed=true; return;}
     					EarlyExitException eee12 = new EarlyExitException( 12, input );
     					DebugRecognitionException(eee12);
     					throw eee12;
@@ -4278,8 +4262,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(12); }
 
-    			DebugLocation(1081, 25);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1081:25: ( Exponent )?
+    			DebugLocation(1092, 25);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1092:25: ( Exponent )?
     			int alt13=2;
     			try { DebugEnterSubRule(13);
     			try { DebugEnterDecision(13, decisionCanBacktrack[13]);
@@ -4294,10 +4278,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1081:25: Exponent
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1092:25: Exponent
     				{
-    				DebugLocation(1081, 25);
-    				mExponent(); if (state.failed) return;
+    				DebugLocation(1092, 25);
+    				mExponent(); 
 
     				}
     				break;
@@ -4305,8 +4289,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			}
     			} finally { DebugExitSubRule(13); }
 
-    			DebugLocation(1081, 35);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1081:35: ( FloatTypeSuffix )?
+    			DebugLocation(1092, 35);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1092:35: ( FloatTypeSuffix )?
     			int alt14=2;
     			try { DebugEnterSubRule(14);
     			try { DebugEnterDecision(14, decisionCanBacktrack[14]);
@@ -4321,10 +4305,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1081:35: FloatTypeSuffix
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1092:35: FloatTypeSuffix
     				{
-    				DebugLocation(1081, 35);
-    				mFloatTypeSuffix(); if (state.failed) return;
+    				DebugLocation(1092, 35);
+    				mFloatTypeSuffix(); 
 
     				}
     				break;
@@ -4332,20 +4316,17 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			}
     			} finally { DebugExitSubRule(14); }
 
-    			DebugLocation(1081, 52);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1092, 52);
+    			charCount++;
 
     			}
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:9: ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )?
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:9: ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )?
     			{
-    			DebugLocation(1082, 9);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:9: ( '0' .. '9' )+
+    			DebugLocation(1093, 9);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:9: ( '0' .. '9' )+
     			int cnt15=0;
     			try { DebugEnterSubRule(15);
     			while (true)
@@ -4365,11 +4346,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    					// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     					{
-    					DebugLocation(1082, 9);
-    					input.Consume(); charCount++;
-    					state.failed=false;
+    					DebugLocation(1093, 9);
+    					input.Consume();
+
 
     					}
     					break;
@@ -4378,7 +4359,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     					if (cnt15 >= 1)
     						goto loop15;
 
-    					if (state.backtracking>0) {state.failed=true; return;}
     					EarlyExitException eee15 = new EarlyExitException( 15, input );
     					DebugRecognitionException(eee15);
     					throw eee15;
@@ -4390,10 +4370,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(15); }
 
-    			DebugLocation(1082, 21);
-    			mExponent(); if (state.failed) return;
-    			DebugLocation(1082, 30);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:30: ( FloatTypeSuffix )?
+    			DebugLocation(1093, 21);
+    			mExponent(); 
+    			DebugLocation(1093, 30);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:30: ( FloatTypeSuffix )?
     			int alt16=2;
     			try { DebugEnterSubRule(16);
     			try { DebugEnterDecision(16, decisionCanBacktrack[16]);
@@ -4408,10 +4388,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1082:30: FloatTypeSuffix
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:30: FloatTypeSuffix
     				{
-    				DebugLocation(1082, 30);
-    				mFloatTypeSuffix(); if (state.failed) return;
+    				DebugLocation(1093, 30);
+    				mFloatTypeSuffix(); 
 
     				}
     				break;
@@ -4419,20 +4399,17 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			}
     			} finally { DebugExitSubRule(16); }
 
-    			DebugLocation(1082, 47);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1093, 47);
+    			charCount++;
 
     			}
     			break;
     		case 4:
     			DebugEnterAlt(4);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1083:9: ( '0' .. '9' )+ FloatTypeSuffix
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1094:9: ( '0' .. '9' )+ FloatTypeSuffix
     			{
-    			DebugLocation(1083, 9);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1083:9: ( '0' .. '9' )+
+    			DebugLocation(1094, 9);
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1094:9: ( '0' .. '9' )+
     			int cnt17=0;
     			try { DebugEnterSubRule(17);
     			while (true)
@@ -4452,11 +4429,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    					// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     					{
-    					DebugLocation(1083, 9);
-    					input.Consume(); charCount++;
-    					state.failed=false;
+    					DebugLocation(1094, 9);
+    					input.Consume();
+
 
     					}
     					break;
@@ -4465,7 +4442,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     					if (cnt17 >= 1)
     						goto loop17;
 
-    					if (state.backtracking>0) {state.failed=true; return;}
     					EarlyExitException eee17 = new EarlyExitException( 17, input );
     					DebugRecognitionException(eee17);
     					throw eee17;
@@ -4477,13 +4453,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(17); }
 
-    			DebugLocation(1083, 21);
-    			mFloatTypeSuffix(); if (state.failed) return;
-    			DebugLocation(1083, 37);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1094, 21);
+    			mFloatTypeSuffix(); 
+    			DebugLocation(1094, 37);
+    			charCount++;
 
     			}
     			break;
@@ -4515,27 +4488,25 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("Exponent", 96);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1088:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1099:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1088:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1099:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
     		{
-    		DebugLocation(1088, 12);
+    		DebugLocation(1099, 12);
     		if (input.LA(1)=='E'||input.LA(1)=='e')
     		{
-    			input.Consume(); charCount++;
-    		state.failed=false;
+    			input.Consume();
     		}
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			MismatchedSetException mse = new MismatchedSetException(null,input);
     			DebugRecognitionException(mse);
     			Recover(mse);
     			throw mse;
     		}
 
-    		DebugLocation(1088, 22);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1088:22: ( '+' | '-' )?
+    		DebugLocation(1099, 22);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1099:22: ( '+' | '-' )?
     		int alt19=2;
     		try { DebugEnterSubRule(19);
     		try { DebugEnterDecision(19, decisionCanBacktrack[19]);
@@ -4550,11 +4521,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     			{
-    			DebugLocation(1088, 22);
-    			input.Consume(); charCount++;
-    			state.failed=false;
+    			DebugLocation(1099, 22);
+    			input.Consume();
+
 
     			}
     			break;
@@ -4562,8 +4533,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(19); }
 
-    		DebugLocation(1088, 33);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1088:33: ( '0' .. '9' )+
+    		DebugLocation(1099, 33);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1099:33: ( '0' .. '9' )+
     		int cnt20=0;
     		try { DebugEnterSubRule(20);
     		while (true)
@@ -4583,11 +4554,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     				{
-    				DebugLocation(1088, 33);
-    				input.Consume(); charCount++;
-    				state.failed=false;
+    				DebugLocation(1099, 33);
+    				input.Consume();
+
 
     				}
     				break;
@@ -4596,7 +4567,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				if (cnt20 >= 1)
     					goto loop20;
 
-    				if (state.backtracking>0) {state.failed=true; return;}
     				EarlyExitException eee20 = new EarlyExitException( 20, input );
     				DebugRecognitionException(eee20);
     				throw eee20;
@@ -4608,11 +4578,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(20); }
 
-    		DebugLocation(1088, 45);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1099, 45);
+    		charCount++;
 
     		}
 
@@ -4640,30 +4607,25 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("FloatTypeSuffix", 97);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:17: ( ( 'f' | 'F' | 'd' | 'D' ) )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1102:17: ( ( 'f' | 'F' | 'd' | 'D' ) )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1091:19: ( 'f' | 'F' | 'd' | 'D' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1102:19: ( 'f' | 'F' | 'd' | 'D' )
     		{
-    		DebugLocation(1091, 19);
+    		DebugLocation(1102, 19);
     		if (input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='d'||input.LA(1)=='f')
     		{
-    			input.Consume(); charCount++;
-    		state.failed=false;
+    			input.Consume();
     		}
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			MismatchedSetException mse = new MismatchedSetException(null,input);
     			DebugRecognitionException(mse);
     			Recover(mse);
     			throw mse;
     		}
 
-    		DebugLocation(1091, 37);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1102, 37);
+    		charCount++;
 
     		}
 
@@ -4693,14 +4655,14 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = CharacterLiteral;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:5: ( '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\'' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1104:5: ( '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\'' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:9: '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\''
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1104:9: '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\''
     		{
-    		DebugLocation(1093, 9);
-    		Match('\''); if (state.failed) return;
-    		DebugLocation(1093, 14);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:14: ( EscapeSequence |~ ( '\\'' | '\\\\' ) )
+    		DebugLocation(1104, 9);
+    		Match('\''); 
+    		DebugLocation(1104, 14);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1104:14: ( EscapeSequence |~ ( '\\'' | '\\\\' ) )
     		int alt21=2;
     		try { DebugEnterSubRule(21);
     		try { DebugEnterDecision(21, decisionCanBacktrack[21]);
@@ -4717,7 +4679,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			NoViableAltException nvae = new NoViableAltException("", 21, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
@@ -4728,20 +4689,20 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:16: EscapeSequence
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1104:16: EscapeSequence
     			{
-    			DebugLocation(1093, 16);
-    			mEscapeSequence(); if (state.failed) return;
+    			DebugLocation(1104, 16);
+    			mEscapeSequence(); 
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1093:33: ~ ( '\\'' | '\\\\' )
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1104:33: ~ ( '\\'' | '\\\\' )
     			{
-    			DebugLocation(1093, 33);
-    			input.Consume(); charCount++;
-    			state.failed=false;
+    			DebugLocation(1104, 33);
+    			input.Consume();
+
 
     			}
     			break;
@@ -4749,13 +4710,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(21); }
 
-    		DebugLocation(1093, 48);
-    		Match('\''); if (state.failed) return;
-    		DebugLocation(1093, 53);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1104, 48);
+    		Match('\''); 
+    		DebugLocation(1104, 53);
+    		charCount++;
 
     		}
 
@@ -4787,14 +4745,14 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = StringLiteral;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1097:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1108:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1097:8: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1108:8: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
     		{
-    		DebugLocation(1097, 8);
-    		Match('\"'); if (state.failed) return;
-    		DebugLocation(1097, 12);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1097:12: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
+    		DebugLocation(1108, 8);
+    		Match('\"'); 
+    		DebugLocation(1108, 12);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1108:12: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
     		try { DebugEnterSubRule(22);
     		while (true)
     		{
@@ -4817,20 +4775,20 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1097:14: EscapeSequence
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1108:14: EscapeSequence
     				{
-    				DebugLocation(1097, 14);
-    				mEscapeSequence(); if (state.failed) return;
+    				DebugLocation(1108, 14);
+    				mEscapeSequence(); 
 
     				}
     				break;
     			case 2:
     				DebugEnterAlt(2);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1097:31: ~ ( '\\\\' | '\"' )
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1108:31: ~ ( '\\\\' | '\"' )
     				{
-    				DebugLocation(1097, 31);
-    				input.Consume(); charCount++;
-    				state.failed=false;
+    				DebugLocation(1108, 31);
+    				input.Consume();
+
 
     				}
     				break;
@@ -4845,13 +4803,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(22); }
 
-    		DebugLocation(1097, 46);
-    		Match('\"'); if (state.failed) return;
-    		DebugLocation(1097, 50);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1108, 46);
+    		Match('\"'); 
+    		DebugLocation(1108, 50);
+    		charCount++;
 
     		}
 
@@ -4881,7 +4836,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("EscapeSequence", 100);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1103:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UnicodeEscape | OctalEscape )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1114:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UnicodeEscape | OctalEscape )
     		int alt23=3;
     		try { DebugEnterDecision(23, decisionCanBacktrack[23]);
     		int LA23_1 = input.LA(1);
@@ -4921,7 +4876,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     				break;
     			default:
     				{
-    					if (state.backtracking>0) {state.failed=true; return;}
     					NoViableAltException nvae = new NoViableAltException("", 23, 1, input, 2);
     					DebugRecognitionException(nvae);
     					throw nvae;
@@ -4932,7 +4886,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			NoViableAltException nvae = new NoViableAltException("", 23, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
@@ -4943,46 +4896,37 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1103:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1114:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
     			{
-    			DebugLocation(1103, 9);
-    			Match('\\'); if (state.failed) return;
-    			DebugLocation(1103, 14);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1103, 51);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1114, 9);
+    			Match('\\'); 
+    			DebugLocation(1114, 14);
+    			input.Consume();
+
+    			DebugLocation(1114, 51);
+    			charCount++;
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1104:9: UnicodeEscape
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1115:9: UnicodeEscape
     			{
-    			DebugLocation(1104, 9);
-    			mUnicodeEscape(); if (state.failed) return;
-    			DebugLocation(1104, 23);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1115, 9);
+    			mUnicodeEscape(); 
+    			DebugLocation(1115, 23);
+    			charCount++;
 
     			}
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1105:9: OctalEscape
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1116:9: OctalEscape
     			{
-    			DebugLocation(1105, 9);
-    			mOctalEscape(); if (state.failed) return;
-    			DebugLocation(1105, 21);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1116, 9);
+    			mOctalEscape(); 
+    			DebugLocation(1116, 21);
+    			charCount++;
 
     			}
     			break;
@@ -5012,7 +4956,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("OctalEscape", 101);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1110:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1121:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
     		int alt24=3;
     		try { DebugEnterDecision(24, decisionCanBacktrack[24]);
     		int LA24_1 = input.LA(1);
@@ -5065,7 +5009,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     			else
     			{
-    				if (state.backtracking>0) {state.failed=true; return;}
     				NoViableAltException nvae = new NoViableAltException("", 24, 1, input, 2);
     				DebugRecognitionException(nvae);
     				throw nvae;
@@ -5075,7 +5018,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			NoViableAltException nvae = new NoViableAltException("", 24, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
@@ -5086,61 +5028,52 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1110:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1121:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
     			{
-    			DebugLocation(1110, 9);
-    			Match('\\'); if (state.failed) return;
-    			DebugLocation(1110, 14);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1110, 25);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1110, 36);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1110, 47);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1121, 9);
+    			Match('\\'); 
+    			DebugLocation(1121, 14);
+    			input.Consume();
+
+    			DebugLocation(1121, 25);
+    			input.Consume();
+
+    			DebugLocation(1121, 36);
+    			input.Consume();
+
+    			DebugLocation(1121, 47);
+    			charCount++;
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1111:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1122:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
     			{
-    			DebugLocation(1111, 9);
-    			Match('\\'); if (state.failed) return;
-    			DebugLocation(1111, 14);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1111, 25);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1111, 36);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1122, 9);
+    			Match('\\'); 
+    			DebugLocation(1122, 14);
+    			input.Consume();
+
+    			DebugLocation(1122, 25);
+    			input.Consume();
+
+    			DebugLocation(1122, 36);
+    			charCount++;
 
     			}
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1112:9: '\\\\' ( '0' .. '7' )
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1123:9: '\\\\' ( '0' .. '7' )
     			{
-    			DebugLocation(1112, 9);
-    			Match('\\'); if (state.failed) return;
-    			DebugLocation(1112, 14);
-    			input.Consume(); charCount++;
-    			state.failed=false;
-    			DebugLocation(1112, 25);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1123, 9);
+    			Match('\\'); 
+    			DebugLocation(1123, 14);
+    			input.Consume();
+
+    			DebugLocation(1123, 25);
+    			charCount++;
 
     			}
     			break;
@@ -5170,27 +5103,24 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("UnicodeEscape", 102);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1117:5: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1128:5: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1117:9: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1128:9: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
     		{
-    		DebugLocation(1117, 9);
-    		Match('\\'); if (state.failed) return;
-    		DebugLocation(1117, 14);
-    		Match('u'); if (state.failed) return;
-    		DebugLocation(1117, 18);
-    		mHexDigit(); if (state.failed) return;
-    		DebugLocation(1117, 27);
-    		mHexDigit(); if (state.failed) return;
-    		DebugLocation(1117, 36);
-    		mHexDigit(); if (state.failed) return;
-    		DebugLocation(1117, 45);
-    		mHexDigit(); if (state.failed) return;
-    		DebugLocation(1117, 54);
-    		if (state.backtracking == 0)
-    		{
-    			charCount++;
-    		}
+    		DebugLocation(1128, 9);
+    		Match('\\'); 
+    		DebugLocation(1128, 14);
+    		Match('u'); 
+    		DebugLocation(1128, 18);
+    		mHexDigit(); 
+    		DebugLocation(1128, 27);
+    		mHexDigit(); 
+    		DebugLocation(1128, 36);
+    		mHexDigit(); 
+    		DebugLocation(1128, 45);
+    		mHexDigit(); 
+    		DebugLocation(1128, 54);
+    		charCount++;
 
     		}
 
@@ -5220,18 +5150,15 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = ENUM;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1119:5: ( 'enum' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1130:5: ( 'enum' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1119:9: 'enum'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1130:9: 'enum'
     		{
-    		DebugLocation(1119, 9);
-    		Match("enum"); if (state.failed) return;
+    		DebugLocation(1130, 9);
+    		Match("enum"); 
 
-    		DebugLocation(1119, 16);
-    		if (state.backtracking == 0)
-    		{
-    			if (!enumIsKeyword) _type=Identifier;
-    		}
+    		DebugLocation(1130, 16);
+    		if (!enumIsKeyword) _type=Identifier;
 
     		}
 
@@ -5263,18 +5190,15 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = ASSERT;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1123:5: ( 'assert' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1134:5: ( 'assert' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1123:9: 'assert'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1134:9: 'assert'
     		{
-    		DebugLocation(1123, 9);
-    		Match("assert"); if (state.failed) return;
+    		DebugLocation(1134, 9);
+    		Match("assert"); 
 
-    		DebugLocation(1123, 18);
-    		if (state.backtracking == 0)
-    		{
-    			if (!assertIsKeyword) _type=Identifier;
-    		}
+    		DebugLocation(1134, 18);
+    		if (!assertIsKeyword) _type=Identifier;
 
     		}
 
@@ -5306,14 +5230,14 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = Identifier;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1127:5: ( Letter ( Letter | JavaIDDigit )* )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1138:5: ( Letter ( Letter | JavaIDDigit )* )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1127:9: Letter ( Letter | JavaIDDigit )*
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1138:9: Letter ( Letter | JavaIDDigit )*
     		{
-    		DebugLocation(1127, 9);
-    		mLetter(); if (state.failed) return;
-    		DebugLocation(1127, 16);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1127:16: ( Letter | JavaIDDigit )*
+    		DebugLocation(1138, 9);
+    		mLetter(); 
+    		DebugLocation(1138, 16);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1138:16: ( Letter | JavaIDDigit )*
     		try { DebugEnterSubRule(25);
     		while (true)
     		{
@@ -5392,24 +5316,21 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1127:17: Letter
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1138:17: Letter
     				{
-    				DebugLocation(1127, 17);
-    				mLetter(); if (state.failed) return;
+    				DebugLocation(1138, 17);
+    				mLetter(); 
 
     				}
     				break;
     			case 2:
     				DebugEnterAlt(2);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1127:24: JavaIDDigit
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1138:24: JavaIDDigit
     				{
-    				DebugLocation(1127, 24);
-    				mJavaIDDigit(); if (state.failed) return;
-    				DebugLocation(1127, 36);
-    				if (state.backtracking == 0)
-    				{
-    					charCount++;
-    				}
+    				DebugLocation(1138, 24);
+    				mJavaIDDigit(); 
+    				DebugLocation(1138, 36);
+    				charCount++;
 
     				}
     				break;
@@ -5453,7 +5374,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("Letter", 106);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1139:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1150:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
     		int alt26=13;
     		try { DebugEnterDecision(26, decisionCanBacktrack[26]);
     		int LA26_1 = input.LA(1);
@@ -5513,7 +5434,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			NoViableAltException nvae = new NoViableAltException("", 26, 0, input, 1);
     			DebugRecognitionException(nvae);
     			throw nvae;
@@ -5524,183 +5444,144 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1139:8: '\\u0024'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1150:8: '\\u0024'
     			{
-    			DebugLocation(1139, 8);
-    			Match('$'); if (state.failed) return;
-    			DebugLocation(1139, 17);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1150, 8);
+    			Match('$'); 
+    			DebugLocation(1150, 17);
+    			charCount++;
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1140:8: '\\u0041' .. '\\u005a'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1151:8: '\\u0041' .. '\\u005a'
     			{
-    			DebugLocation(1140, 8);
-    			MatchRange('A','Z'); if (state.failed) return;
-    			DebugLocation(1140, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1151, 8);
+    			MatchRange('A','Z'); 
+    			DebugLocation(1151, 27);
+    			charCount++;
 
     			}
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1141:8: '\\u005f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1152:8: '\\u005f'
     			{
-    			DebugLocation(1141, 8);
-    			Match('_'); if (state.failed) return;
-    			DebugLocation(1141, 17);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1152, 8);
+    			Match('_'); 
+    			DebugLocation(1152, 17);
+    			charCount++;
 
     			}
     			break;
     		case 4:
     			DebugEnterAlt(4);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1142:8: '\\u0061' .. '\\u007a'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1153:8: '\\u0061' .. '\\u007a'
     			{
-    			DebugLocation(1142, 8);
-    			MatchRange('a','z'); if (state.failed) return;
-    			DebugLocation(1142, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1153, 8);
+    			MatchRange('a','z'); 
+    			DebugLocation(1153, 27);
+    			charCount++;
 
     			}
     			break;
     		case 5:
     			DebugEnterAlt(5);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1143:8: '\\u00c0' .. '\\u00d6'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1154:8: '\\u00c0' .. '\\u00d6'
     			{
-    			DebugLocation(1143, 8);
-    			MatchRange('\u00C0','\u00D6'); if (state.failed) return;
-    			DebugLocation(1143, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1154, 8);
+    			MatchRange('\u00C0','\u00D6'); 
+    			DebugLocation(1154, 27);
+    			charCount++;
 
     			}
     			break;
     		case 6:
     			DebugEnterAlt(6);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1144:8: '\\u00d8' .. '\\u00f6'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1155:8: '\\u00d8' .. '\\u00f6'
     			{
-    			DebugLocation(1144, 8);
-    			MatchRange('\u00D8','\u00F6'); if (state.failed) return;
-    			DebugLocation(1144, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1155, 8);
+    			MatchRange('\u00D8','\u00F6'); 
+    			DebugLocation(1155, 27);
+    			charCount++;
 
     			}
     			break;
     		case 7:
     			DebugEnterAlt(7);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1145:8: '\\u00f8' .. '\\u00ff'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1156:8: '\\u00f8' .. '\\u00ff'
     			{
-    			DebugLocation(1145, 8);
-    			MatchRange('\u00F8','\u00FF'); if (state.failed) return;
-    			DebugLocation(1145, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1156, 8);
+    			MatchRange('\u00F8','\u00FF'); 
+    			DebugLocation(1156, 27);
+    			charCount++;
 
     			}
     			break;
     		case 8:
     			DebugEnterAlt(8);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1146:8: '\\u0100' .. '\\u1fff'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1157:8: '\\u0100' .. '\\u1fff'
     			{
-    			DebugLocation(1146, 8);
-    			MatchRange('\u0100','\u1FFF'); if (state.failed) return;
-    			DebugLocation(1146, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1157, 8);
+    			MatchRange('\u0100','\u1FFF'); 
+    			DebugLocation(1157, 27);
+    			charCount++;
 
     			}
     			break;
     		case 9:
     			DebugEnterAlt(9);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1147:8: '\\u3040' .. '\\u318f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1158:8: '\\u3040' .. '\\u318f'
     			{
-    			DebugLocation(1147, 8);
-    			MatchRange('\u3040','\u318F'); if (state.failed) return;
-    			DebugLocation(1147, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1158, 8);
+    			MatchRange('\u3040','\u318F'); 
+    			DebugLocation(1158, 27);
+    			charCount++;
 
     			}
     			break;
     		case 10:
     			DebugEnterAlt(10);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1148:8: '\\u3300' .. '\\u337f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1159:8: '\\u3300' .. '\\u337f'
     			{
-    			DebugLocation(1148, 8);
-    			MatchRange('\u3300','\u337F'); if (state.failed) return;
-    			DebugLocation(1148, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1159, 8);
+    			MatchRange('\u3300','\u337F'); 
+    			DebugLocation(1159, 27);
+    			charCount++;
 
     			}
     			break;
     		case 11:
     			DebugEnterAlt(11);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1149:8: '\\u3400' .. '\\u3d2d'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1160:8: '\\u3400' .. '\\u3d2d'
     			{
-    			DebugLocation(1149, 8);
-    			MatchRange('\u3400','\u3D2D'); if (state.failed) return;
-    			DebugLocation(1149, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1160, 8);
+    			MatchRange('\u3400','\u3D2D'); 
+    			DebugLocation(1160, 27);
+    			charCount++;
 
     			}
     			break;
     		case 12:
     			DebugEnterAlt(12);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1150:8: '\\u4e00' .. '\\u9fff'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1161:8: '\\u4e00' .. '\\u9fff'
     			{
-    			DebugLocation(1150, 8);
-    			MatchRange('\u4E00','\u9FFF'); if (state.failed) return;
-    			DebugLocation(1150, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1161, 8);
+    			MatchRange('\u4E00','\u9FFF'); 
+    			DebugLocation(1161, 27);
+    			charCount++;
 
     			}
     			break;
     		case 13:
     			DebugEnterAlt(13);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1151:8: '\\uf900' .. '\\ufaff'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1162:8: '\\uf900' .. '\\ufaff'
     			{
-    			DebugLocation(1151, 8);
-    			MatchRange('\uF900','\uFAFF'); if (state.failed) return;
-    			DebugLocation(1151, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1162, 8);
+    			MatchRange('\uF900','\uFAFF'); 
+    			DebugLocation(1162, 27);
+    			charCount++;
 
     			}
     			break;
@@ -5730,7 +5611,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("JavaIDDigit", 107);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1153:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1164:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
     		int alt27=15;
     		try { DebugEnterDecision(27, decisionCanBacktrack[27]);
     		switch (input.LA(1))
@@ -5946,7 +5827,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			break;
     		default:
     			{
-    				if (state.backtracking>0) {state.failed=true; return;}
     				NoViableAltException nvae = new NoViableAltException("", 27, 0, input, 1);
     				DebugRecognitionException(nvae);
     				throw nvae;
@@ -5958,211 +5838,166 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1153:8: '\\u0030' .. '\\u0039'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1164:8: '\\u0030' .. '\\u0039'
     			{
-    			DebugLocation(1153, 8);
-    			MatchRange('0','9'); if (state.failed) return;
-    			DebugLocation(1153, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1164, 8);
+    			MatchRange('0','9'); 
+    			DebugLocation(1164, 27);
+    			charCount++;
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1154:8: '\\u0660' .. '\\u0669'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1165:8: '\\u0660' .. '\\u0669'
     			{
-    			DebugLocation(1154, 8);
-    			MatchRange('\u0660','\u0669'); if (state.failed) return;
-    			DebugLocation(1154, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1165, 8);
+    			MatchRange('\u0660','\u0669'); 
+    			DebugLocation(1165, 27);
+    			charCount++;
 
     			}
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1155:8: '\\u06f0' .. '\\u06f9'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1166:8: '\\u06f0' .. '\\u06f9'
     			{
-    			DebugLocation(1155, 8);
-    			MatchRange('\u06F0','\u06F9'); if (state.failed) return;
-    			DebugLocation(1155, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1166, 8);
+    			MatchRange('\u06F0','\u06F9'); 
+    			DebugLocation(1166, 27);
+    			charCount++;
 
     			}
     			break;
     		case 4:
     			DebugEnterAlt(4);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1156:8: '\\u0966' .. '\\u096f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1167:8: '\\u0966' .. '\\u096f'
     			{
-    			DebugLocation(1156, 8);
-    			MatchRange('\u0966','\u096F'); if (state.failed) return;
-    			DebugLocation(1156, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1167, 8);
+    			MatchRange('\u0966','\u096F'); 
+    			DebugLocation(1167, 27);
+    			charCount++;
 
     			}
     			break;
     		case 5:
     			DebugEnterAlt(5);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1157:8: '\\u09e6' .. '\\u09ef'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1168:8: '\\u09e6' .. '\\u09ef'
     			{
-    			DebugLocation(1157, 8);
-    			MatchRange('\u09E6','\u09EF'); if (state.failed) return;
-    			DebugLocation(1157, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1168, 8);
+    			MatchRange('\u09E6','\u09EF'); 
+    			DebugLocation(1168, 27);
+    			charCount++;
 
     			}
     			break;
     		case 6:
     			DebugEnterAlt(6);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1158:8: '\\u0a66' .. '\\u0a6f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1169:8: '\\u0a66' .. '\\u0a6f'
     			{
-    			DebugLocation(1158, 8);
-    			MatchRange('\u0A66','\u0A6F'); if (state.failed) return;
-    			DebugLocation(1158, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1169, 8);
+    			MatchRange('\u0A66','\u0A6F'); 
+    			DebugLocation(1169, 27);
+    			charCount++;
 
     			}
     			break;
     		case 7:
     			DebugEnterAlt(7);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1159:8: '\\u0ae6' .. '\\u0aef'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1170:8: '\\u0ae6' .. '\\u0aef'
     			{
-    			DebugLocation(1159, 8);
-    			MatchRange('\u0AE6','\u0AEF'); if (state.failed) return;
-    			DebugLocation(1159, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1170, 8);
+    			MatchRange('\u0AE6','\u0AEF'); 
+    			DebugLocation(1170, 27);
+    			charCount++;
 
     			}
     			break;
     		case 8:
     			DebugEnterAlt(8);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1160:8: '\\u0b66' .. '\\u0b6f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1171:8: '\\u0b66' .. '\\u0b6f'
     			{
-    			DebugLocation(1160, 8);
-    			MatchRange('\u0B66','\u0B6F'); if (state.failed) return;
-    			DebugLocation(1160, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1171, 8);
+    			MatchRange('\u0B66','\u0B6F'); 
+    			DebugLocation(1171, 27);
+    			charCount++;
 
     			}
     			break;
     		case 9:
     			DebugEnterAlt(9);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1161:8: '\\u0be7' .. '\\u0bef'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1172:8: '\\u0be7' .. '\\u0bef'
     			{
-    			DebugLocation(1161, 8);
-    			MatchRange('\u0BE7','\u0BEF'); if (state.failed) return;
-    			DebugLocation(1161, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1172, 8);
+    			MatchRange('\u0BE7','\u0BEF'); 
+    			DebugLocation(1172, 27);
+    			charCount++;
 
     			}
     			break;
     		case 10:
     			DebugEnterAlt(10);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1162:8: '\\u0c66' .. '\\u0c6f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1173:8: '\\u0c66' .. '\\u0c6f'
     			{
-    			DebugLocation(1162, 8);
-    			MatchRange('\u0C66','\u0C6F'); if (state.failed) return;
-    			DebugLocation(1162, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1173, 8);
+    			MatchRange('\u0C66','\u0C6F'); 
+    			DebugLocation(1173, 27);
+    			charCount++;
 
     			}
     			break;
     		case 11:
     			DebugEnterAlt(11);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1163:8: '\\u0ce6' .. '\\u0cef'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:8: '\\u0ce6' .. '\\u0cef'
     			{
-    			DebugLocation(1163, 8);
-    			MatchRange('\u0CE6','\u0CEF'); if (state.failed) return;
-    			DebugLocation(1163, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1174, 8);
+    			MatchRange('\u0CE6','\u0CEF'); 
+    			DebugLocation(1174, 27);
+    			charCount++;
 
     			}
     			break;
     		case 12:
     			DebugEnterAlt(12);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1164:8: '\\u0d66' .. '\\u0d6f'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:8: '\\u0d66' .. '\\u0d6f'
     			{
-    			DebugLocation(1164, 8);
-    			MatchRange('\u0D66','\u0D6F'); if (state.failed) return;
-    			DebugLocation(1164, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1175, 8);
+    			MatchRange('\u0D66','\u0D6F'); 
+    			DebugLocation(1175, 27);
+    			charCount++;
 
     			}
     			break;
     		case 13:
     			DebugEnterAlt(13);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1165:8: '\\u0e50' .. '\\u0e59'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1176:8: '\\u0e50' .. '\\u0e59'
     			{
-    			DebugLocation(1165, 8);
-    			MatchRange('\u0E50','\u0E59'); if (state.failed) return;
-    			DebugLocation(1165, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1176, 8);
+    			MatchRange('\u0E50','\u0E59'); 
+    			DebugLocation(1176, 27);
+    			charCount++;
 
     			}
     			break;
     		case 14:
     			DebugEnterAlt(14);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1166:8: '\\u0ed0' .. '\\u0ed9'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1177:8: '\\u0ed0' .. '\\u0ed9'
     			{
-    			DebugLocation(1166, 8);
-    			MatchRange('\u0ED0','\u0ED9'); if (state.failed) return;
-    			DebugLocation(1166, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1177, 8);
+    			MatchRange('\u0ED0','\u0ED9'); 
+    			DebugLocation(1177, 27);
+    			charCount++;
 
     			}
     			break;
     		case 15:
     			DebugEnterAlt(15);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1167:8: '\\u1040' .. '\\u1049'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1178:8: '\\u1040' .. '\\u1049'
     			{
-    			DebugLocation(1167, 8);
-    			MatchRange('\u1040','\u1049'); if (state.failed) return;
-    			DebugLocation(1167, 27);
-    			if (state.backtracking == 0)
-    			{
-    				charCount++;
-    			}
+    			DebugLocation(1178, 8);
+    			MatchRange('\u1040','\u1049'); 
+    			DebugLocation(1178, 27);
+    			charCount++;
 
     			}
     			break;
@@ -6194,30 +6029,25 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = WS;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1170:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1181:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1170:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1181:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
     		{
-    		DebugLocation(1170, 8);
+    		DebugLocation(1181, 8);
     		if ((input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ')
     		{
-    			input.Consume(); charCount++;
-    		state.failed=false;
+    			input.Consume();
     		}
     		else
     		{
-    			if (state.backtracking>0) {state.failed=true; return;}
     			MismatchedSetException mse = new MismatchedSetException(null,input);
     			DebugRecognitionException(mse);
     			Recover(mse);
     			throw mse;
     		}
 
-    		DebugLocation(1170, 38);
-    		if (state.backtracking == 0)
-    		{
-    			whiteSpaceCount++; _channel=Hidden;
-    		}
+    		DebugLocation(1181, 38);
+    		whiteSpaceCount++; _channel=Hidden;
 
     		}
 
@@ -6249,8 +6079,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		int _type = Comments;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:2: ( ( '/*' ( options {greedy=false; } : . )* '*/' )=> COMMENT | ( '//' ( (~ ( '\\n' | '\\r' ) ) )* ( '\\r' )? '\\n' )=> LINE_COMMENT | EOF )
-    		int alt28=3;
+    		CommonToken COMMENT1 = default(CommonToken);
+    		CommonToken LINE_COMMENT2 = default(CommonToken);
+
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1185:2: ( COMMENT | LINE_COMMENT )
+    		int alt28=2;
     		try { DebugEnterDecision(28, decisionCanBacktrack[28]);
     		int LA28_1 = input.LA(1);
 
@@ -6258,20 +6091,29 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     			int LA28_2 = input.LA(2);
 
-    			if ((LA28_2=='*') && (EvaluatePredicate(synpred1_Java_MIT_fragment)))
+    			if ((LA28_2=='*'))
     			{
     				alt28 = 1;
     			}
-    			else if ((LA28_2=='/') && (EvaluatePredicate(synpred2_Java_MIT_fragment)))
+    			else if ((LA28_2=='/'))
     			{
     				alt28 = 2;
+    			}
+
+    			else
+    			{
+    				NoViableAltException nvae = new NoViableAltException("", 28, 1, input, 2);
+    				DebugRecognitionException(nvae);
+    				throw nvae;
     			}
 
     		}
 
     		else
     		{
-    			alt28 = 3;
+    			NoViableAltException nvae = new NoViableAltException("", 28, 0, input, 1);
+    			DebugRecognitionException(nvae);
+    			throw nvae;
     		}
 
     		} finally { DebugExitDecision(28); }
@@ -6279,40 +6121,39 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:4: ( '/*' ( options {greedy=false; } : . )* '*/' )=> COMMENT
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1185:4: COMMENT
     			{
-    			DebugLocation(1174, 52);
-    			mCOMMENT(); if (state.failed) return;
-    			DebugLocation(1174, 60);
-    			if (state.backtracking == 0)
-    			{
-    				//commentCharCount = commentCharCount + 4; 
-                    _channel=Hidden;
-    			}
+    			DebugLocation(1185, 4);
+    			int COMMENT1Start1751 = CharIndex;
+    			int COMMENT1StartLine1751 = Line;
+    			int COMMENT1StartCharPos1751 = CharPositionInLine;
+    			mCOMMENT(); 
+    			COMMENT1 = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, COMMENT1Start1751, CharIndex-1);
+    			COMMENT1.Line = COMMENT1StartLine1751;
+    			COMMENT1.CharPositionInLine = COMMENT1StartCharPos1751;
+    			DebugLocation(1185, 12);
+    			commentsSet.Add(COMMENT1.Text);
+    			DebugLocation(1186, 3);
+    			_channel=Hidden;
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:4: ( '//' ( (~ ( '\\n' | '\\r' ) ) )* ( '\\r' )? '\\n' )=> LINE_COMMENT
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1187:4: LINE_COMMENT
     			{
-    			DebugLocation(1175, 43);
-    			mLINE_COMMENT(); if (state.failed) return;
-    			DebugLocation(1175, 56);
-    			if (state.backtracking == 0)
-    			{
-    				//commentCharCount = commentCharCount + 2; 
-                    _channel=Hidden;
-    			}
-
-    			}
-    			break;
-    		case 3:
-    			DebugEnterAlt(3);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1176:4: EOF
-    			{
-    			DebugLocation(1176, 4);
-    			Match(EOF); if (state.failed) return;
+    			DebugLocation(1187, 4);
+    			int LINE_COMMENT2Start1762 = CharIndex;
+    			int LINE_COMMENT2StartLine1762 = Line;
+    			int LINE_COMMENT2StartCharPos1762 = CharPositionInLine;
+    			mLINE_COMMENT(); 
+    			LINE_COMMENT2 = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, LINE_COMMENT2Start1762, CharIndex-1);
+    			LINE_COMMENT2.Line = LINE_COMMENT2StartLine1762;
+    			LINE_COMMENT2.CharPositionInLine = LINE_COMMENT2StartCharPos1762;
+    			DebugLocation(1187, 17);
+    			commentsSet.Add(LINE_COMMENT2.Text);
+    			DebugLocation(1188, 3);
+    			_channel=Hidden; 
 
     			}
     			break;
@@ -6344,19 +6185,18 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("COMMENT", 110);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1182:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1194:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1182:9: '/*' ( options {greedy=false; } : . )* '*/'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1194:9: '/*' ( options {greedy=false; } : . )* '*/'
     		{
-    		DebugLocation(1182, 9);
-    		Match("/*"); if (state.failed) return;
+    		DebugLocation(1194, 9);
+    		Match("/*"); 
 
-    		DebugLocation(1182, 14);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1182:14: ( options {greedy=false; } : . )*
+    		DebugLocation(1194, 14);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1194:14: ( options {greedy=false; } : . )*
     		try { DebugEnterSubRule(29);
     		while (true)
     		{
-                commentCharCount++;
     			int alt29=2;
     			try { DebugEnterDecision(29, decisionCanBacktrack[29]);
     			int LA29_1 = input.LA(1);
@@ -6387,10 +6227,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1182:42: .
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1194:42: .
     				{
-    				DebugLocation(1182, 42);
-    				MatchAny(); if (state.failed) return;
+    				DebugLocation(1194, 42);
+    				MatchAny(); 
 
     				}
     				break;
@@ -6405,8 +6245,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(29); }
 
-    		DebugLocation(1182, 47);
-    		Match("*/"); if (state.failed) return;
+    		DebugLocation(1194, 47);
+    		Match("*/"); 
 
 
     		}
@@ -6435,19 +6275,18 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	TraceIn("LINE_COMMENT", 111);
     		try
     		{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1187:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1199:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1187:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1199:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
     		{
-    		DebugLocation(1187, 7);
-    		Match("//"); if (state.failed) return;
+    		DebugLocation(1199, 7);
+    		Match("//"); 
 
-    		DebugLocation(1187, 12);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1187:12: (~ ( '\\n' | '\\r' ) )*
+    		DebugLocation(1199, 12);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1199:12: (~ ( '\\n' | '\\r' ) )*
     		try { DebugEnterSubRule(30);
     		while (true)
     		{
-                commentCharCount++;
     			int alt30=2;
     			try { DebugEnterDecision(30, decisionCanBacktrack[30]);
     			int LA30_1 = input.LA(1);
@@ -6463,11 +6302,11 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
+    				// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
     				{
-    				DebugLocation(1187, 12);
-    				input.Consume(); charCount++;
-    				state.failed=false;
+    				DebugLocation(1199, 12);
+    				input.Consume();
+
 
     				}
     				break;
@@ -6482,8 +6321,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     		} finally { DebugExitSubRule(30); }
 
-    		DebugLocation(1187, 26);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1187:26: ( '\\r' )?
+    		DebugLocation(1199, 26);
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1199:26: ( '\\r' )?
     		int alt31=2;
     		try { DebugEnterSubRule(31);
     		try { DebugEnterDecision(31, decisionCanBacktrack[31]);
@@ -6498,10 +6337,10 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1187:26: '\\r'
+    			// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1199:26: '\\r'
     			{
-    			DebugLocation(1187, 26);
-    			Match('\r'); if (state.failed) return;
+    			DebugLocation(1199, 26);
+    			Match('\r'); 
 
     			}
     			break;
@@ -6509,8 +6348,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(31); }
 
-    		DebugLocation(1187, 32);
-    		Match('\n'); if (state.failed) return;
+    		DebugLocation(1199, 32);
+    		Match('\n'); 
 
     		}
 
@@ -6526,7 +6365,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 
     public override void mTokens()
     {
-    	// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:8: ( T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | HexLiteral | DecimalLiteral | OctalLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | ENUM | ASSERT | Identifier | WS | Comments )
+    	// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:8: ( T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | HexLiteral | DecimalLiteral | OctalLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | ENUM | ASSERT | Identifier | WS | Comments )
     	int alt32=100;
     	try { DebugEnterDecision(32, decisionCanBacktrack[32]);
     	try
@@ -6543,901 +6382,901 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	{
     	case 1:
     		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:10: T__26
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:10: T__26
     		{
     		DebugLocation(1, 10);
-    		mT__26(); if (state.failed) return;
+    		mT__26(); 
 
     		}
     		break;
     	case 2:
     		DebugEnterAlt(2);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:16: T__27
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:16: T__27
     		{
     		DebugLocation(1, 16);
-    		mT__27(); if (state.failed) return;
+    		mT__27(); 
 
     		}
     		break;
     	case 3:
     		DebugEnterAlt(3);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:22: T__28
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:22: T__28
     		{
     		DebugLocation(1, 22);
-    		mT__28(); if (state.failed) return;
+    		mT__28(); 
 
     		}
     		break;
     	case 4:
     		DebugEnterAlt(4);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:28: T__29
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:28: T__29
     		{
     		DebugLocation(1, 28);
-    		mT__29(); if (state.failed) return;
+    		mT__29(); 
 
     		}
     		break;
     	case 5:
     		DebugEnterAlt(5);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:34: T__30
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:34: T__30
     		{
     		DebugLocation(1, 34);
-    		mT__30(); if (state.failed) return;
+    		mT__30(); 
 
     		}
     		break;
     	case 6:
     		DebugEnterAlt(6);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:40: T__31
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:40: T__31
     		{
     		DebugLocation(1, 40);
-    		mT__31(); if (state.failed) return;
+    		mT__31(); 
 
     		}
     		break;
     	case 7:
     		DebugEnterAlt(7);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:46: T__32
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:46: T__32
     		{
     		DebugLocation(1, 46);
-    		mT__32(); if (state.failed) return;
+    		mT__32(); 
 
     		}
     		break;
     	case 8:
     		DebugEnterAlt(8);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:52: T__33
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:52: T__33
     		{
     		DebugLocation(1, 52);
-    		mT__33(); if (state.failed) return;
+    		mT__33(); 
 
     		}
     		break;
     	case 9:
     		DebugEnterAlt(9);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:58: T__34
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:58: T__34
     		{
     		DebugLocation(1, 58);
-    		mT__34(); if (state.failed) return;
+    		mT__34(); 
 
     		}
     		break;
     	case 10:
     		DebugEnterAlt(10);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:64: T__35
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:64: T__35
     		{
     		DebugLocation(1, 64);
-    		mT__35(); if (state.failed) return;
+    		mT__35(); 
 
     		}
     		break;
     	case 11:
     		DebugEnterAlt(11);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:70: T__36
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:70: T__36
     		{
     		DebugLocation(1, 70);
-    		mT__36(); if (state.failed) return;
+    		mT__36(); 
 
     		}
     		break;
     	case 12:
     		DebugEnterAlt(12);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:76: T__37
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:76: T__37
     		{
     		DebugLocation(1, 76);
-    		mT__37(); if (state.failed) return;
+    		mT__37(); 
 
     		}
     		break;
     	case 13:
     		DebugEnterAlt(13);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:82: T__38
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:82: T__38
     		{
     		DebugLocation(1, 82);
-    		mT__38(); if (state.failed) return;
+    		mT__38(); 
 
     		}
     		break;
     	case 14:
     		DebugEnterAlt(14);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:88: T__39
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:88: T__39
     		{
     		DebugLocation(1, 88);
-    		mT__39(); if (state.failed) return;
+    		mT__39(); 
 
     		}
     		break;
     	case 15:
     		DebugEnterAlt(15);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:94: T__40
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:94: T__40
     		{
     		DebugLocation(1, 94);
-    		mT__40(); if (state.failed) return;
+    		mT__40(); 
 
     		}
     		break;
     	case 16:
     		DebugEnterAlt(16);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:100: T__41
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:100: T__41
     		{
     		DebugLocation(1, 100);
-    		mT__41(); if (state.failed) return;
+    		mT__41(); 
 
     		}
     		break;
     	case 17:
     		DebugEnterAlt(17);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:106: T__42
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:106: T__42
     		{
     		DebugLocation(1, 106);
-    		mT__42(); if (state.failed) return;
+    		mT__42(); 
 
     		}
     		break;
     	case 18:
     		DebugEnterAlt(18);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:112: T__43
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:112: T__43
     		{
     		DebugLocation(1, 112);
-    		mT__43(); if (state.failed) return;
+    		mT__43(); 
 
     		}
     		break;
     	case 19:
     		DebugEnterAlt(19);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:118: T__44
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:118: T__44
     		{
     		DebugLocation(1, 118);
-    		mT__44(); if (state.failed) return;
+    		mT__44(); 
 
     		}
     		break;
     	case 20:
     		DebugEnterAlt(20);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:124: T__45
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:124: T__45
     		{
     		DebugLocation(1, 124);
-    		mT__45(); if (state.failed) return;
+    		mT__45(); 
 
     		}
     		break;
     	case 21:
     		DebugEnterAlt(21);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:130: T__46
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:130: T__46
     		{
     		DebugLocation(1, 130);
-    		mT__46(); if (state.failed) return;
+    		mT__46(); 
 
     		}
     		break;
     	case 22:
     		DebugEnterAlt(22);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:136: T__47
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:136: T__47
     		{
     		DebugLocation(1, 136);
-    		mT__47(); if (state.failed) return;
+    		mT__47(); 
 
     		}
     		break;
     	case 23:
     		DebugEnterAlt(23);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:142: T__48
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:142: T__48
     		{
     		DebugLocation(1, 142);
-    		mT__48(); if (state.failed) return;
+    		mT__48(); 
 
     		}
     		break;
     	case 24:
     		DebugEnterAlt(24);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:148: T__49
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:148: T__49
     		{
     		DebugLocation(1, 148);
-    		mT__49(); if (state.failed) return;
+    		mT__49(); 
 
     		}
     		break;
     	case 25:
     		DebugEnterAlt(25);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:154: T__50
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:154: T__50
     		{
     		DebugLocation(1, 154);
-    		mT__50(); if (state.failed) return;
+    		mT__50(); 
 
     		}
     		break;
     	case 26:
     		DebugEnterAlt(26);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:160: T__51
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:160: T__51
     		{
     		DebugLocation(1, 160);
-    		mT__51(); if (state.failed) return;
+    		mT__51(); 
 
     		}
     		break;
     	case 27:
     		DebugEnterAlt(27);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:166: T__52
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:166: T__52
     		{
     		DebugLocation(1, 166);
-    		mT__52(); if (state.failed) return;
+    		mT__52(); 
 
     		}
     		break;
     	case 28:
     		DebugEnterAlt(28);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:172: T__53
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:172: T__53
     		{
     		DebugLocation(1, 172);
-    		mT__53(); if (state.failed) return;
+    		mT__53(); 
 
     		}
     		break;
     	case 29:
     		DebugEnterAlt(29);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:178: T__54
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:178: T__54
     		{
     		DebugLocation(1, 178);
-    		mT__54(); if (state.failed) return;
+    		mT__54(); 
 
     		}
     		break;
     	case 30:
     		DebugEnterAlt(30);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:184: T__55
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:184: T__55
     		{
     		DebugLocation(1, 184);
-    		mT__55(); if (state.failed) return;
+    		mT__55(); 
 
     		}
     		break;
     	case 31:
     		DebugEnterAlt(31);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:190: T__56
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:190: T__56
     		{
     		DebugLocation(1, 190);
-    		mT__56(); if (state.failed) return;
+    		mT__56(); 
 
     		}
     		break;
     	case 32:
     		DebugEnterAlt(32);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:196: T__57
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:196: T__57
     		{
     		DebugLocation(1, 196);
-    		mT__57(); if (state.failed) return;
+    		mT__57(); 
 
     		}
     		break;
     	case 33:
     		DebugEnterAlt(33);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:202: T__58
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:202: T__58
     		{
     		DebugLocation(1, 202);
-    		mT__58(); if (state.failed) return;
+    		mT__58(); 
 
     		}
     		break;
     	case 34:
     		DebugEnterAlt(34);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:208: T__59
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:208: T__59
     		{
     		DebugLocation(1, 208);
-    		mT__59(); if (state.failed) return;
+    		mT__59(); 
 
     		}
     		break;
     	case 35:
     		DebugEnterAlt(35);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:214: T__60
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:214: T__60
     		{
     		DebugLocation(1, 214);
-    		mT__60(); if (state.failed) return;
+    		mT__60(); 
 
     		}
     		break;
     	case 36:
     		DebugEnterAlt(36);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:220: T__61
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:220: T__61
     		{
     		DebugLocation(1, 220);
-    		mT__61(); if (state.failed) return;
+    		mT__61(); 
 
     		}
     		break;
     	case 37:
     		DebugEnterAlt(37);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:226: T__62
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:226: T__62
     		{
     		DebugLocation(1, 226);
-    		mT__62(); if (state.failed) return;
+    		mT__62(); 
 
     		}
     		break;
     	case 38:
     		DebugEnterAlt(38);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:232: T__63
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:232: T__63
     		{
     		DebugLocation(1, 232);
-    		mT__63(); if (state.failed) return;
+    		mT__63(); 
 
     		}
     		break;
     	case 39:
     		DebugEnterAlt(39);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:238: T__64
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:238: T__64
     		{
     		DebugLocation(1, 238);
-    		mT__64(); if (state.failed) return;
+    		mT__64(); 
 
     		}
     		break;
     	case 40:
     		DebugEnterAlt(40);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:244: T__65
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:244: T__65
     		{
     		DebugLocation(1, 244);
-    		mT__65(); if (state.failed) return;
+    		mT__65(); 
 
     		}
     		break;
     	case 41:
     		DebugEnterAlt(41);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:250: T__66
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:250: T__66
     		{
     		DebugLocation(1, 250);
-    		mT__66(); if (state.failed) return;
+    		mT__66(); 
 
     		}
     		break;
     	case 42:
     		DebugEnterAlt(42);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:256: T__67
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:256: T__67
     		{
     		DebugLocation(1, 256);
-    		mT__67(); if (state.failed) return;
+    		mT__67(); 
 
     		}
     		break;
     	case 43:
     		DebugEnterAlt(43);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:262: T__68
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:262: T__68
     		{
     		DebugLocation(1, 262);
-    		mT__68(); if (state.failed) return;
+    		mT__68(); 
 
     		}
     		break;
     	case 44:
     		DebugEnterAlt(44);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:268: T__69
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:268: T__69
     		{
     		DebugLocation(1, 268);
-    		mT__69(); if (state.failed) return;
+    		mT__69(); 
 
     		}
     		break;
     	case 45:
     		DebugEnterAlt(45);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:274: T__70
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:274: T__70
     		{
     		DebugLocation(1, 274);
-    		mT__70(); if (state.failed) return;
+    		mT__70(); 
 
     		}
     		break;
     	case 46:
     		DebugEnterAlt(46);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:280: T__71
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:280: T__71
     		{
     		DebugLocation(1, 280);
-    		mT__71(); if (state.failed) return;
+    		mT__71(); 
 
     		}
     		break;
     	case 47:
     		DebugEnterAlt(47);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:286: T__72
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:286: T__72
     		{
     		DebugLocation(1, 286);
-    		mT__72(); if (state.failed) return;
+    		mT__72(); 
 
     		}
     		break;
     	case 48:
     		DebugEnterAlt(48);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:292: T__73
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:292: T__73
     		{
     		DebugLocation(1, 292);
-    		mT__73(); if (state.failed) return;
+    		mT__73(); 
 
     		}
     		break;
     	case 49:
     		DebugEnterAlt(49);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:298: T__74
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:298: T__74
     		{
     		DebugLocation(1, 298);
-    		mT__74(); if (state.failed) return;
+    		mT__74(); 
 
     		}
     		break;
     	case 50:
     		DebugEnterAlt(50);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:304: T__75
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:304: T__75
     		{
     		DebugLocation(1, 304);
-    		mT__75(); if (state.failed) return;
+    		mT__75(); 
 
     		}
     		break;
     	case 51:
     		DebugEnterAlt(51);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:310: T__76
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:310: T__76
     		{
     		DebugLocation(1, 310);
-    		mT__76(); if (state.failed) return;
+    		mT__76(); 
 
     		}
     		break;
     	case 52:
     		DebugEnterAlt(52);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:316: T__77
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:316: T__77
     		{
     		DebugLocation(1, 316);
-    		mT__77(); if (state.failed) return;
+    		mT__77(); 
 
     		}
     		break;
     	case 53:
     		DebugEnterAlt(53);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:322: T__78
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:322: T__78
     		{
     		DebugLocation(1, 322);
-    		mT__78(); if (state.failed) return;
+    		mT__78(); 
 
     		}
     		break;
     	case 54:
     		DebugEnterAlt(54);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:328: T__79
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:328: T__79
     		{
     		DebugLocation(1, 328);
-    		mT__79(); if (state.failed) return;
+    		mT__79(); 
 
     		}
     		break;
     	case 55:
     		DebugEnterAlt(55);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:334: T__80
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:334: T__80
     		{
     		DebugLocation(1, 334);
-    		mT__80(); if (state.failed) return;
+    		mT__80(); 
 
     		}
     		break;
     	case 56:
     		DebugEnterAlt(56);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:340: T__81
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:340: T__81
     		{
     		DebugLocation(1, 340);
-    		mT__81(); if (state.failed) return;
+    		mT__81(); 
 
     		}
     		break;
     	case 57:
     		DebugEnterAlt(57);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:346: T__82
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:346: T__82
     		{
     		DebugLocation(1, 346);
-    		mT__82(); if (state.failed) return;
+    		mT__82(); 
 
     		}
     		break;
     	case 58:
     		DebugEnterAlt(58);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:352: T__83
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:352: T__83
     		{
     		DebugLocation(1, 352);
-    		mT__83(); if (state.failed) return;
+    		mT__83(); 
 
     		}
     		break;
     	case 59:
     		DebugEnterAlt(59);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:358: T__84
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:358: T__84
     		{
     		DebugLocation(1, 358);
-    		mT__84(); if (state.failed) return;
+    		mT__84(); 
 
     		}
     		break;
     	case 60:
     		DebugEnterAlt(60);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:364: T__85
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:364: T__85
     		{
     		DebugLocation(1, 364);
-    		mT__85(); if (state.failed) return;
+    		mT__85(); 
 
     		}
     		break;
     	case 61:
     		DebugEnterAlt(61);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:370: T__86
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:370: T__86
     		{
     		DebugLocation(1, 370);
-    		mT__86(); if (state.failed) return;
+    		mT__86(); 
 
     		}
     		break;
     	case 62:
     		DebugEnterAlt(62);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:376: T__87
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:376: T__87
     		{
     		DebugLocation(1, 376);
-    		mT__87(); if (state.failed) return;
+    		mT__87(); 
 
     		}
     		break;
     	case 63:
     		DebugEnterAlt(63);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:382: T__88
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:382: T__88
     		{
     		DebugLocation(1, 382);
-    		mT__88(); if (state.failed) return;
+    		mT__88(); 
 
     		}
     		break;
     	case 64:
     		DebugEnterAlt(64);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:388: T__89
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:388: T__89
     		{
     		DebugLocation(1, 388);
-    		mT__89(); if (state.failed) return;
+    		mT__89(); 
 
     		}
     		break;
     	case 65:
     		DebugEnterAlt(65);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:394: T__90
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:394: T__90
     		{
     		DebugLocation(1, 394);
-    		mT__90(); if (state.failed) return;
+    		mT__90(); 
 
     		}
     		break;
     	case 66:
     		DebugEnterAlt(66);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:400: T__91
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:400: T__91
     		{
     		DebugLocation(1, 400);
-    		mT__91(); if (state.failed) return;
+    		mT__91(); 
 
     		}
     		break;
     	case 67:
     		DebugEnterAlt(67);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:406: T__92
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:406: T__92
     		{
     		DebugLocation(1, 406);
-    		mT__92(); if (state.failed) return;
+    		mT__92(); 
 
     		}
     		break;
     	case 68:
     		DebugEnterAlt(68);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:412: T__93
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:412: T__93
     		{
     		DebugLocation(1, 412);
-    		mT__93(); if (state.failed) return;
+    		mT__93(); 
 
     		}
     		break;
     	case 69:
     		DebugEnterAlt(69);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:418: T__94
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:418: T__94
     		{
     		DebugLocation(1, 418);
-    		mT__94(); if (state.failed) return;
+    		mT__94(); 
 
     		}
     		break;
     	case 70:
     		DebugEnterAlt(70);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:424: T__95
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:424: T__95
     		{
     		DebugLocation(1, 424);
-    		mT__95(); if (state.failed) return;
+    		mT__95(); 
 
     		}
     		break;
     	case 71:
     		DebugEnterAlt(71);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:430: T__96
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:430: T__96
     		{
     		DebugLocation(1, 430);
-    		mT__96(); if (state.failed) return;
+    		mT__96(); 
 
     		}
     		break;
     	case 72:
     		DebugEnterAlt(72);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:436: T__97
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:436: T__97
     		{
     		DebugLocation(1, 436);
-    		mT__97(); if (state.failed) return;
+    		mT__97(); 
 
     		}
     		break;
     	case 73:
     		DebugEnterAlt(73);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:442: T__98
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:442: T__98
     		{
     		DebugLocation(1, 442);
-    		mT__98(); if (state.failed) return;
+    		mT__98(); 
 
     		}
     		break;
     	case 74:
     		DebugEnterAlt(74);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:448: T__99
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:448: T__99
     		{
     		DebugLocation(1, 448);
-    		mT__99(); if (state.failed) return;
+    		mT__99(); 
 
     		}
     		break;
     	case 75:
     		DebugEnterAlt(75);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:454: T__100
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:454: T__100
     		{
     		DebugLocation(1, 454);
-    		mT__100(); if (state.failed) return;
+    		mT__100(); 
 
     		}
     		break;
     	case 76:
     		DebugEnterAlt(76);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:461: T__101
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:461: T__101
     		{
     		DebugLocation(1, 461);
-    		mT__101(); if (state.failed) return;
+    		mT__101(); 
 
     		}
     		break;
     	case 77:
     		DebugEnterAlt(77);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:468: T__102
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:468: T__102
     		{
     		DebugLocation(1, 468);
-    		mT__102(); if (state.failed) return;
+    		mT__102(); 
 
     		}
     		break;
     	case 78:
     		DebugEnterAlt(78);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:475: T__103
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:475: T__103
     		{
     		DebugLocation(1, 475);
-    		mT__103(); if (state.failed) return;
+    		mT__103(); 
 
     		}
     		break;
     	case 79:
     		DebugEnterAlt(79);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:482: T__104
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:482: T__104
     		{
     		DebugLocation(1, 482);
-    		mT__104(); if (state.failed) return;
+    		mT__104(); 
 
     		}
     		break;
     	case 80:
     		DebugEnterAlt(80);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:489: T__105
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:489: T__105
     		{
     		DebugLocation(1, 489);
-    		mT__105(); if (state.failed) return;
+    		mT__105(); 
 
     		}
     		break;
     	case 81:
     		DebugEnterAlt(81);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:496: T__106
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:496: T__106
     		{
     		DebugLocation(1, 496);
-    		mT__106(); if (state.failed) return;
+    		mT__106(); 
 
     		}
     		break;
     	case 82:
     		DebugEnterAlt(82);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:503: T__107
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:503: T__107
     		{
     		DebugLocation(1, 503);
-    		mT__107(); if (state.failed) return;
+    		mT__107(); 
 
     		}
     		break;
     	case 83:
     		DebugEnterAlt(83);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:510: T__108
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:510: T__108
     		{
     		DebugLocation(1, 510);
-    		mT__108(); if (state.failed) return;
+    		mT__108(); 
 
     		}
     		break;
     	case 84:
     		DebugEnterAlt(84);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:517: T__109
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:517: T__109
     		{
     		DebugLocation(1, 517);
-    		mT__109(); if (state.failed) return;
+    		mT__109(); 
 
     		}
     		break;
     	case 85:
     		DebugEnterAlt(85);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:524: T__110
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:524: T__110
     		{
     		DebugLocation(1, 524);
-    		mT__110(); if (state.failed) return;
+    		mT__110(); 
 
     		}
     		break;
     	case 86:
     		DebugEnterAlt(86);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:531: T__111
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:531: T__111
     		{
     		DebugLocation(1, 531);
-    		mT__111(); if (state.failed) return;
+    		mT__111(); 
 
     		}
     		break;
     	case 87:
     		DebugEnterAlt(87);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:538: T__112
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:538: T__112
     		{
     		DebugLocation(1, 538);
-    		mT__112(); if (state.failed) return;
+    		mT__112(); 
 
     		}
     		break;
     	case 88:
     		DebugEnterAlt(88);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:545: T__113
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:545: T__113
     		{
     		DebugLocation(1, 545);
-    		mT__113(); if (state.failed) return;
+    		mT__113(); 
 
     		}
     		break;
     	case 89:
     		DebugEnterAlt(89);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:552: T__114
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:552: T__114
     		{
     		DebugLocation(1, 552);
-    		mT__114(); if (state.failed) return;
+    		mT__114(); 
 
     		}
     		break;
     	case 90:
     		DebugEnterAlt(90);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:559: HexLiteral
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:559: HexLiteral
     		{
     		DebugLocation(1, 559);
-    		mHexLiteral(); if (state.failed) return;
+    		mHexLiteral(); 
 
     		}
     		break;
     	case 91:
     		DebugEnterAlt(91);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:570: DecimalLiteral
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:570: DecimalLiteral
     		{
     		DebugLocation(1, 570);
-    		mDecimalLiteral(); if (state.failed) return;
+    		mDecimalLiteral(); 
 
     		}
     		break;
     	case 92:
     		DebugEnterAlt(92);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:585: OctalLiteral
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:585: OctalLiteral
     		{
     		DebugLocation(1, 585);
-    		mOctalLiteral(); if (state.failed) return;
+    		mOctalLiteral(); 
 
     		}
     		break;
     	case 93:
     		DebugEnterAlt(93);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:598: FloatingPointLiteral
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:598: FloatingPointLiteral
     		{
     		DebugLocation(1, 598);
-    		mFloatingPointLiteral(); if (state.failed) return;
+    		mFloatingPointLiteral(); 
 
     		}
     		break;
     	case 94:
     		DebugEnterAlt(94);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:619: CharacterLiteral
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:619: CharacterLiteral
     		{
     		DebugLocation(1, 619);
-    		mCharacterLiteral(); if (state.failed) return;
+    		mCharacterLiteral(); 
 
     		}
     		break;
     	case 95:
     		DebugEnterAlt(95);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:636: StringLiteral
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:636: StringLiteral
     		{
     		DebugLocation(1, 636);
-    		mStringLiteral(); if (state.failed) return;
+    		mStringLiteral(); 
 
     		}
     		break;
     	case 96:
     		DebugEnterAlt(96);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:650: ENUM
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:650: ENUM
     		{
     		DebugLocation(1, 650);
-    		mENUM(); if (state.failed) return;
+    		mENUM(); 
 
     		}
     		break;
     	case 97:
     		DebugEnterAlt(97);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:655: ASSERT
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:655: ASSERT
     		{
     		DebugLocation(1, 655);
-    		mASSERT(); if (state.failed) return;
+    		mASSERT(); 
 
     		}
     		break;
     	case 98:
     		DebugEnterAlt(98);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:662: Identifier
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:662: Identifier
     		{
     		DebugLocation(1, 662);
-    		mIdentifier(); if (state.failed) return;
+    		mIdentifier(); 
 
     		}
     		break;
     	case 99:
     		DebugEnterAlt(99);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:673: WS
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:673: WS
     		{
     		DebugLocation(1, 673);
-    		mWS(); if (state.failed) return;
+    		mWS(); 
 
     		}
     		break;
     	case 100:
     		DebugEnterAlt(100);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:676: Comments
+    		// G:\\CECS547\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1:676: Comments
     		{
     		DebugLocation(1, 676);
-    		mComments(); if (state.failed) return;
+    		mComments(); 
 
     		}
     		break;
@@ -7445,230 +7284,6 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
     	}
 
     }
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_synpred1_Java_MIT_fragment() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_synpred1_Java_MIT_fragment() {}
-
-    // $ANTLR start synpred1_Java_MIT
-    private void synpred1_Java_MIT_fragment()
-    {
-    	EnterRule_synpred1_Java_MIT_fragment();
-    	EnterRule("synpred1_Java_MIT_fragment", 113);
-    	TraceIn("synpred1_Java_MIT_fragment", 113);
-    	try
-    	{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:5: '/*' ( options {greedy=false; } : . )* '*/'
-    		{
-    		DebugLocation(1174, 5);
-    		Match("/*"); if (state.failed) return;
-
-    		DebugLocation(1174, 10);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:10: ( options {greedy=false; } : . )*
-    		try { DebugEnterSubRule(33);
-    		while (true)
-    		{
-    			int alt33=2;
-    			try { DebugEnterDecision(33, decisionCanBacktrack[33]);
-    			int LA33_1 = input.LA(1);
-
-    			if ((LA33_1=='*'))
-    			{
-    				int LA33_2 = input.LA(2);
-
-    				if ((LA33_2=='/'))
-    				{
-    					alt33 = 2;
-    				}
-    				else if (((LA33_2>='\u0000' && LA33_2<='.')||(LA33_2>='0' && LA33_2<='\uFFFF')))
-    				{
-    					alt33 = 1;
-    				}
-
-
-    			}
-    			else if (((LA33_1>='\u0000' && LA33_1<=')')||(LA33_1>='+' && LA33_1<='\uFFFF')))
-    			{
-    				alt33 = 1;
-    			}
-
-
-    			} finally { DebugExitDecision(33); }
-    			switch ( alt33 )
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1174:38: .
-    				{
-    				DebugLocation(1174, 38);
-    				MatchAny(); if (state.failed) return;
-
-    				}
-    				break;
-
-    			default:
-    				goto loop33;
-    			}
-    		}
-
-    		loop33:
-    			;
-
-    		} finally { DebugExitSubRule(33); }
-
-    		DebugLocation(1174, 43);
-    		Match("*/"); if (state.failed) return;
-
-
-    		}
-
-    	}
-    	finally
-    	{
-    		TraceOut("synpred1_Java_MIT_fragment", 113);
-    		LeaveRule("synpred1_Java_MIT_fragment", 113);
-    		LeaveRule_synpred1_Java_MIT_fragment();
-    	}
-    }
-    // $ANTLR end synpred1_Java_MIT
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_synpred2_Java_MIT_fragment() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_synpred2_Java_MIT_fragment() {}
-
-    // $ANTLR start synpred2_Java_MIT
-    private void synpred2_Java_MIT_fragment()
-    {
-    	EnterRule_synpred2_Java_MIT_fragment();
-    	EnterRule("synpred2_Java_MIT_fragment", 114);
-    	TraceIn("synpred2_Java_MIT_fragment", 114);
-    	try
-    	{
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:4: ( '//' ( (~ ( '\\n' | '\\r' ) ) )* ( '\\r' )? '\\n' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:5: '//' ( (~ ( '\\n' | '\\r' ) ) )* ( '\\r' )? '\\n'
-    		{
-    		DebugLocation(1175, 5);
-    		Match("//"); if (state.failed) return;
-
-    		DebugLocation(1175, 10);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:10: ( (~ ( '\\n' | '\\r' ) ) )*
-    		try { DebugEnterSubRule(34);
-    		while (true)
-    		{
-    			int alt34=2;
-    			try { DebugEnterDecision(34, decisionCanBacktrack[34]);
-    			int LA34_1 = input.LA(1);
-
-    			if (((LA34_1>='\u0000' && LA34_1<='\t')||(LA34_1>='\u000B' && LA34_1<='\f')||(LA34_1>='\u000E' && LA34_1<='\uFFFF')))
-    			{
-    				alt34 = 1;
-    			}
-
-
-    			} finally { DebugExitDecision(34); }
-    			switch ( alt34 )
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:
-    				{
-    				DebugLocation(1175, 10);
-    				if ((input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF'))
-    				{
-    					input.Consume(); charCount++;
-    				state.failed=false;
-    				}
-    				else
-    				{
-    					if (state.backtracking>0) {state.failed=true; return;}
-    					MismatchedSetException mse = new MismatchedSetException(null,input);
-    					DebugRecognitionException(mse);
-    					Recover(mse);
-    					throw mse;
-    				}
-
-
-    				}
-    				break;
-
-    			default:
-    				goto loop34;
-    			}
-    		}
-
-    		loop34:
-    			;
-
-    		} finally { DebugExitSubRule(34); }
-
-    		DebugLocation(1175, 28);
-    		// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:28: ( '\\r' )?
-    		int alt35=2;
-    		try { DebugEnterSubRule(35);
-    		try { DebugEnterDecision(35, decisionCanBacktrack[35]);
-    		int LA35_1 = input.LA(1);
-
-    		if ((LA35_1=='\r'))
-    		{
-    			alt35 = 1;
-    		}
-    		} finally { DebugExitDecision(35); }
-    		switch (alt35)
-    		{
-    		case 1:
-    			DebugEnterAlt(1);
-    			// C:\\Users\\Ariel\\Documents\\Visual Studio 2013\\Projects\\ANTLRReasoningCounter\\ANTLRReasoningCounter\\Java_MIT.g:1175:28: '\\r'
-    			{
-    			DebugLocation(1175, 28);
-    			Match('\r'); if (state.failed) return;
-
-    			}
-    			break;
-
-    		}
-    		} finally { DebugExitSubRule(35); }
-
-    		DebugLocation(1175, 34);
-    		Match('\n'); if (state.failed) return;
-
-    		}
-
-    	}
-    	finally
-    	{
-    		TraceOut("synpred2_Java_MIT_fragment", 114);
-    		LeaveRule("synpred2_Java_MIT_fragment", 114);
-    		LeaveRule_synpred2_Java_MIT_fragment();
-    	}
-    }
-    // $ANTLR end synpred2_Java_MIT
-
-	#region Synpreds
-	private bool EvaluatePredicate(System.Action fragment)
-	{
-		bool success = false;
-		state.backtracking++;
-		try { DebugBeginBacktrack(state.backtracking);
-		int start = input.Mark();
-		try
-		{
-			fragment();
-		}
-		catch ( RecognitionException re )
-		{
-			System.Console.Error.WriteLine("impossible: "+re);
-		}
-		success = !state.failed;
-		input.Rewind(start);
-		} finally { DebugEndBacktrack(state.backtracking, success); }
-		state.backtracking--;
-		state.failed=false;
-		return success;
-	}
-	#endregion Synpreds
 
 
 	#region DFA
@@ -7738,7 +7353,7 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 			this.transition = DFA18_transition;
 		}
 
-		public override string Description { get { return "1079:1: FloatingPointLiteral : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix );"; } }
+		public override string Description { get { return "1090:1: FloatingPointLiteral : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -7749,9 +7364,9 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 	private class DFA32 : DFA
 	{
 		private const string DFA32_eotS =
-			"\x1\x2F\x1\x31\x1\x33\x1\x36\x2\xFFFF\x1\x38\x1\x3B\x1\xFFFF\x1\x3E\x1"+
-			"\x40\x1\x43\x3\xFFFF\x1\x45\x5\xFFFF\x1\x47\xF\x2D\x1\xFFFF\x1\x70\x2"+
-			"\xFFFF\x2\x72\x1D\xFFFF\xA\x2D\x1\x81\x7\x2D\x1\x89\x13\x2D\x5\xFFFF"+
+			"\x1\xFFFF\x1\x30\x1\x32\x1\x35\x2\xFFFF\x1\x37\x1\x3A\x1\xFFFF\x1\x3D"+
+			"\x1\x3F\x1\x43\x3\xFFFF\x1\x45\x5\xFFFF\x1\x47\xF\x2D\x1\xFFFF\x1\x70"+
+			"\x2\xFFFF\x2\x72\x1D\xFFFF\xA\x2D\x1\x81\x7\x2D\x1\x89\x13\x2D\x5\xFFFF"+
 			"\x1\xA4\x1\x72\xC\x2D\x1\xFFFF\x6\x2D\x1\xB7\x1\xFFFF\x2\x2D\x1\xBC\x2"+
 			"\x2D\x1\xBF\x10\x2D\x1\xD0\x3\x2D\x1\xFFFF\x4\x2D\x1\xD8\x1\xD9\x1\x2D"+
 			"\x1\xDB\x4\x2D\x1\xE0\x1\x2D\x1\xE2\x3\x2D\x1\xFFFF\x4\x2D\x1\xFFFF\x1"+
@@ -7834,12 +7449,12 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 		private const string DFA32_acceptS =
 			"\x4\xFFFF\x1\x8\x1\x9\x2\xFFFF\x1\xF\x3\xFFFF\x1\x17\x1\x18\x1\x19\x1"+
 			"\xFFFF\x1\x1C\x1\x1D\x1\x1E\x1\x1F\x1\x20\x10\xFFFF\x1\x54\x1\xFFFF\x1"+
-			"\x58\x1\x59\x2\xFFFF\x1\x5E\x1\x5F\x1\x62\x1\x63\x1\x64\x1\x2\x1\x1\x1"+
-			"\x4\x1\x3\x1\x5\x1\x7\x1\x6\x1\xB\x1\xA\x1\xD\x1\xE\x1\xC\x1\x11\x1\x12"+
-			"\x1\x10\x1\x14\x1\x13\x1\x5D\x1\x16\x1\x15\x1\x1B\x1\x1A\x1\x22\x1\x21"+
-			"\x26\xFFFF\x1\x56\x1\x57\x1\x55\x1\x5A\x1\x5B\xE\xFFFF\x1\x2D\x7\xFFFF"+
-			"\x1\x36\x1A\xFFFF\x1\x5C\x12\xFFFF\x1\x35\x4\xFFFF\x1\x3A\x2\xFFFF\x1"+
-			"\x3E\x10\xFFFF\x1\x50\x7\xFFFF\x1\x26\x1\x27\x1\xFFFF\x1\x29\x4\xFFFF"+
+			"\x58\x1\x59\x2\xFFFF\x1\x5E\x1\x5F\x1\x62\x1\x63\x1\x2\x1\x1\x1\x4\x1"+
+			"\x3\x1\x5\x1\x7\x1\x6\x1\xB\x1\xA\x1\xD\x1\xE\x1\xC\x1\x11\x1\x12\x1"+
+			"\x10\x1\x14\x1\x13\x1\x5D\x1\x16\x1\x64\x1\x15\x1\x1B\x1\x1A\x1\x22\x1"+
+			"\x21\x26\xFFFF\x1\x56\x1\x57\x1\x55\x1\x5A\x1\x5B\xE\xFFFF\x1\x2D\x7"+
+			"\xFFFF\x1\x36\x1A\xFFFF\x1\x5C\x12\xFFFF\x1\x35\x4\xFFFF\x1\x3A\x2\xFFFF"+
+			"\x1\x3E\x10\xFFFF\x1\x50\x7\xFFFF\x1\x26\x1\x27\x1\xFFFF\x1\x29\x4\xFFFF"+
 			"\x1\x2F\x1\xFFFF\x1\x60\x7\xFFFF\x1\x3C\x1\xFFFF\x1\x3F\xB\xFFFF\x1\x4B"+
 			"\x2\xFFFF\x1\x4F\x1\x51\x5\xFFFF\x1\x25\x1\x28\x1\x2A\x4\xFFFF\x1\x31"+
 			"\x1\xFFFF\x1\x32\x1\x34\xA\xFFFF\x1\x45\x2\xFFFF\x1\x48\x3\xFFFF\x1\x4C"+
@@ -7861,17 +7476,17 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 				"\x1\x26\x1\x27\x1\x28\x41\xFFFF\x17\x2D\x1\xFFFF\x1F\x2D\x1\xFFFF\x1F08"+
 				"\x2D\x1040\xFFFF\x150\x2D\x170\xFFFF\x80\x2D\x80\xFFFF\x92E\x2D\x10D2"+
 				"\xFFFF\x5200\x2D\x5900\xFFFF\x200\x2D",
-				"\x1\x30",
-				"\x1\x32",
-				"\x1\x34\x16\xFFFF\x1\x35",
+				"\x1\x2F",
+				"\x1\x31",
+				"\x1\x33\x16\xFFFF\x1\x34",
 				"",
 				"",
-				"\x1\x37",
-				"\x1\x39\x11\xFFFF\x1\x3A",
+				"\x1\x36",
+				"\x1\x38\x11\xFFFF\x1\x39",
 				"",
-				"\x1\x3C\xF\xFFFF\x1\x3D",
-				"\x1\x3F\x1\xFFFF\xA\x41",
-				"\x1\x2F\x4\xFFFF\x1\x2F\xD\xFFFF\x1\x42",
+				"\x1\x3B\xF\xFFFF\x1\x3C",
+				"\x1\x3E\x1\xFFFF\xA\x40",
+				"\x1\x42\x4\xFFFF\x1\x42\xD\xFFFF\x1\x41",
 				"",
 				"",
 				"",
@@ -7901,9 +7516,9 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 				"\x1\x6E\x3E\xFFFF\x1\x6F",
 				"",
 				"",
-				"\x1\x41\x1\xFFFF\x8\x73\x2\x41\xA\xFFFF\x3\x41\x11\xFFFF\x1\x71\xB"+
-				"\xFFFF\x3\x41\x11\xFFFF\x1\x71",
-				"\x1\x41\x1\xFFFF\xA\x74\xA\xFFFF\x3\x41\x1D\xFFFF\x3\x41",
+				"\x1\x40\x1\xFFFF\x8\x73\x2\x40\xA\xFFFF\x3\x40\x11\xFFFF\x1\x71\xB"+
+				"\xFFFF\x3\x40\x11\xFFFF\x1\x71",
+				"\x1\x40\x1\xFFFF\xA\x74\xA\xFFFF\x3\x40\x1D\xFFFF\x3\x40",
 				"",
 				"",
 				"",
@@ -7982,8 +7597,8 @@ public partial class Java_MITLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
-				"\x1\x41\x1\xFFFF\x8\x73\x2\x41\xA\xFFFF\x3\x41\x1D\xFFFF\x3\x41",
-				"\x1\x41\x1\xFFFF\xA\x74\xA\xFFFF\x3\x41\x1D\xFFFF\x3\x41",
+				"\x1\x40\x1\xFFFF\x8\x73\x2\x40\xA\xFFFF\x3\x40\x1D\xFFFF\x3\x40",
+				"\x1\x40\x1\xFFFF\xA\x74\xA\xFFFF\x3\x40\x1D\xFFFF\x3\x40",
 				"\x1\xA5",
 				"\x1\xA6",
 				"\x1\xA7",
