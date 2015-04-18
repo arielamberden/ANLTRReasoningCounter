@@ -1,0 +1,26 @@
+﻿<Window x:Class="ANTLRReasoningCounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ARC: ANTLR Reasoning Counter" Height="718" Width="1350" Background="#FF323131">
+    <Grid>
+        <RadioButton x:Name="displayModeDB" Content="Use Data Retrieved from Database" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" GroupName="DisplayMode" IsChecked="True" FontWeight="Bold" FontSize="16" Checked="OnCheckedDBMode"/>
+        <RadioButton x:Name="displayModeScan" Content="Display Data from File Scan" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" GroupName="DisplayMode" FontWeight="Bold" FontSize="16" Checked="OnCheckedFileScanMode"/>
+        <TextBox x:Name="textBoxFilepath" HorizontalAlignment="Left" Height="23" Margin="30,45,0,0" TextWrapping="Wrap" Text="Enter filepath" VerticalAlignment="Top" Width="989" Foreground="#FF959393" Background="Black"/>
+        <Button x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Left" Margin="1024,45,0,0" VerticalAlignment="Top" Width="75" Click="OnClickBrowseButton"/>
+        <Button x:Name="buttonScan" Content="Scan" HorizontalAlignment="Left" Margin="1109,45,0,0" VerticalAlignment="Top" Width="75" Click="OnClickScanButton"/>
+        <Button x:Name="buttonAddToDB" Content="Add to DB" HorizontalAlignment="Left" Margin="1194,45,0,0" VerticalAlignment="Top" Width="75" Click="OnClickAddToDBButton"/>
+        <Rectangle Fill="#FF474749" HorizontalAlignment="Left" Height="579" Margin="10,98,0,0" Stroke="Black" VerticalAlignment="Top" Width="1322"/>
+        <Label Content="Source Code Information" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Label Content="Files" HorizontalAlignment="Left" Margin="30,98,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <DataGrid x:Name="dataGridFiles" HorizontalAlignment="Left" Margin="30,122,0,0" VerticalAlignment="Top" Height="100
+                  " Width="1302" Background="Black" Foreground="#FF919191"/>
+        <Label Content="Packages" HorizontalAlignment="Left" Margin="30,221,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <DataGrid x:Name="dataGridPackages" HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Height="100" Width="1285" Background="Black" Foreground="#FF919191"/>
+        <Label Content="Classes" HorizontalAlignment="Left" Margin="30,353,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <DataGrid x:Name="dataGridClasses" HorizontalAlignment="Left" Margin="30,379,0,0" VerticalAlignment="Top" Height="150" Width="1285" Background="Black" Foreground="#FF919191"/>
+        <Button x:Name="buttonClearDB" Content="Clear DB" HorizontalAlignment="Left" Margin="292,0,0,0" VerticalAlignment="Top" Width="75" Click="OnClickClearDBButton"/>
+        <DataGrid x:Name="dataGridMethods" HorizontalAlignment="Left" Margin="30,560,0,0" VerticalAlignment="Top" Height="100" Width="1285" Background="Black" Foreground="#FF919191"/>
+        <Label Content="Methods" HorizontalAlignment="Left" Margin="30,534,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+    </Grid>
+</Window>
